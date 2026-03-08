@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KULA BEEF | เนื้อวัวคุณภาพพรีเมียม</title>
+    <meta name="description" content="ร้านขายจำหน่ายผลิตภัณฑ์เนื้อวัว โคขุน หั่นสดใหม่ พร้อมส่งตรงถึงบ้านคุณ">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;700&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="asset/logo_KB.jpg">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="asset/logo_KB.jpg" alt="Kula Beef Logo">
+                <span>KULA BEEF</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" data-i18n="nav-home">หน้าแรก</a></li>
+                <li><a href="#about" data-i18n="nav-about">เกี่ยวกับเรา</a></li>
+                <li><a href="#products" data-i18n="nav-products">สินค้าของเรา</a></li>
+                <li><a href="#menu" data-i18n="nav-menu">เมนูแนะนำ</a></li>
+                <li class="lang-switch">
+                    <button class="lang-btn active" data-lang="th">TH</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="cn">中</button>
+                    <button class="lang-btn" data-lang="ar">AR</button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section id="home" class="header-banner fade-in">
+        <div class="banner-bg">
+            <img src="asset/header.jpg" alt="Background">
+        </div>
+        <div class="banner-content">
+            <img src="asset/header.jpg" alt="Kula Beef Premium Cuts">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container fade-in">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 data-i18n="about-title">ทำไมต้อง <span class="highlight">KULA BEEF?</span></h2>
+                    <p data-i18n="about-desc">เราใส่ใจทุกขั้นตอน ตั้งแต่การคัดเลือกสายพันธุ์โค
+                        การเลี้ยงดูด้วยธัญพืชคุณภาพ
+                        จนถึงกระบวนการตัดแต่งโดยผู้เชี่ยวชาญ (Butcher) เพื่อให้ได้เนื้อที่มีลายไขมันแทรก (Marbling)
+                        ที่สวยงาม รสชาติเข้มข้น และปลอดภัยที่สุด</p>
+                    <ul class="features">
+                        <li><span class="check-icon">✓</span> <span data-i18n="about-feature-1">ฟาร์มมาตรฐาน
+                                ปลอดสารเร่งเนื้อแดง</span></li>
+                        <li><span class="check-icon">✓</span> <span data-i18n="about-feature-2">บ่ม (Aging)
+                                อย่างพิถีพิถันเพื่อความนุ่ม</span></li>
+                        <li><span class="check-icon">✓</span> <span data-i18n="about-feature-3">จัดส่งสะอาด ปลอดภัย
+                                ควบคุมอุณหภูมิทั่วประเทศ</span></li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="asset/beef0.jpg" alt="Kula Beef Quality" class="rounded-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container relative">
+            <h2 class="section-title fade-in" data-i18n="prod-title">ผลิตภัณฑ์ของเรา</h2>
+            <div class="carousel-wrapper fade-in">
+                <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous Product">❮</button>
+                <div class="product-grid" id="productGrid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="card-img">
+                            <img src="asset/beef1.jpg" alt="เนื้อสไลด์ใบพาย ไทยวากิว">
+                        </div>
+                        <div class="card-content">
+                            <h3 data-i18n="prod-1">เนื้อสไลด์ใบพาย ไทยวากิว (200g)</h3>
+                            <div class="price-row">
+                                <span class="price">฿120</span>
+                                <button class="btn btn-outline" data-i18n="btn-order"
+                                    onclick="addToCart('เนื้อสไลด์ใบพาย ไทยวากิว')">สั่งซื้อ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="card-img">
+                            <img src="asset/beef2.jpg" alt="เนื้อสเต็ก">
+                        </div>
+                        <div class="card-content">
+                            <h3 data-i18n="prod-2">เนื้อสเต็ก</h3>
+                            <div class="price-row">
+                                <span class="price">฿150</span>
+                                <button class="btn btn-outline" data-i18n="btn-order"
+                                    onclick="addToCart('เนื้อสเต็ก')">สั่งซื้อ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="card-img">
+                            <img src="asset/beef3.jpg" alt="เนื้อครึ่งแดด">
+                        </div>
+                        <div class="card-content">
+                            <h3 data-i18n="prod-3">เนื้อครึ่งแดด (200g)</h3>
+                            <div class="price-row">
+                                <span class="price">฿160</span>
+                                <button class="btn btn-outline" data-i18n="btn-order"
+                                    onclick="addToCart('เนื้อครึ่งแดด')">สั่งซื้อ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="card-img">
+                            <img src="asset/beef4.jpg" alt="เนื้อสไลด์ วากิว">
+                        </div>
+                        <div class="card-content">
+                            <h3 data-i18n="prod-4">เนื้อสไลด์ วากิว (100g)</h3>
+                            <div class="price-row">
+                                <span class="price">฿59</span>
+                                <button class="btn btn-outline" data-i18n="btn-order"
+                                    onclick="addToCart('เนื้อสไลด์ วากิว')">สั่งซื้อ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next-btn fade-in" id="nextBtn" aria-label="Next Product">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container fade-in">
+            <div class="menu-wrapper">
+                <div class="menu-content">
+                    <h2 data-i18n="menu-title">สร้างสรรค์เมนูสุดพิเศษ</h2>
+                    <p data-i18n="menu-desc">ยกระดับมื้ออาหารของคุณด้วยเนื้อคุณภาพจากเรา ไม่ว่าจะเป็นสเต็กเนื้อนุ่มละมุน
+                        ซุปเนื้อตุ๋นยาจีนรสกลมกล่อม หรือชาบูเนื้อสไลด์แสนอร่อย ทำมื้อธรรมดาให้กลายเป็นมื้อพิเศษได้ง่ายๆ
+                        ที่บ้านคุณ</p>
+                    <a href="#products" class="btn btn-primary" data-i18n="menu-btn">เลือกเนื้อไปทำเมนูโปรด</a>
+                </div>
+                <div class="menu-image">
+                    <img src="asset/menu3.jpg" alt="Delicious Beef Menu">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="asset/logo_KB.jpg" alt="Kula Beef Logo" class="footer-logo">
+                    <p><span data-i18n="footer-brand1">KULA BEEF - เนื้อพรีเมี่ยม</span></p>
+                    <p data-i18n="footer-brand2">มุ่งมั่นส่งมอบประสบการณ์การทานเนื้อวัวที่ดีที่สุดให้คุณในทุกๆ คำ</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer-link-title">ลิงก์ด่วน</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="nav-home">หน้าแรก</a></li>
+                        <li><a href="#about" data-i18n="nav-about">เกี่ยวกับเรา</a></li>
+                        <li><a href="#products" data-i18n="nav-products">สินค้าทั้งหมด</a></li>
+                        <li><a href="#menu" data-i18n="nav-menu">เมนูแนะนำ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer-contact-title">ติดต่อเรา</h4>
+                    <p><a href="https://web.facebook.com/kulabeef/?_rdc=1&_rdr#" target="_blank"
+                            rel="noopener noreferrer">📘 Facebook: KULA BEEF</a></p>
+                    <p>📞 086 412 2922</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 KULA BEEF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
