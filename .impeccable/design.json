@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T00:00:00Z",
+  "title": "Design System: KULA BEEF",
+  "extensions": {
+    "colorMeta": {
+      "kula-red": { "role": "primary", "displayName": "KULA Red", "canonical": "#d6231c", "tonalRamp": ["#3d0a08", "#5e0f0c", "#821510", "#a8150f", "#d6231c", "#e85a52", "#f29a94", "#fbdcd9"] },
+      "kula-red-deep": { "role": "primary", "displayName": "Deep Press Red", "canonical": "#a8150f", "tonalRamp": ["#2e0705", "#4a0b08", "#6b100b", "#8a130d", "#a8150f", "#c9443d", "#e4908b", "#f7d9d7"] },
+      "sack-ink": { "role": "neutral", "displayName": "Sack Ink", "canonical": "#141210", "tonalRamp": ["#141210", "#2a2724", "#44403b", "#625d57", "#85807a", "#aaa59f", "#d1cdc8", "#f0eeeb"] },
+      "woven-sack": { "role": "neutral", "displayName": "Woven Sack", "canonical": "#f9f9f6", "tonalRamp": ["#3b3b36", "#5a5a53", "#7a7a72", "#9b9b93", "#bdbdb5", "#dcdcd5", "#efefea", "#f9f9f6"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The KULA BEEF wordmark only, one word per line, Archivo 900 at 125% width." },
+      "headline": { "displayName": "Headline", "purpose": "Uppercase extended section titles; 800 and line-height 1.25 under Thai and Arabic." },
+      "weight-figure": { "displayName": "Weight Figure", "purpose": "Red printed net weight on each pack." },
+      "subhead": { "displayName": "Subhead", "purpose": "Red uppercase origin line beneath the wordmark." },
+      "title": { "displayName": "Title", "purpose": "Pack names." },
+      "body": { "displayName": "Body", "purpose": "Running text, 46-60ch." },
+      "label": { "displayName": "Label", "purpose": "Red uppercase spec-row keys; same extended-caps pattern for nav and buttons." }
+    },
+    "materials": [
+      { "name": "weave-tile", "value": "url(asset/site/weave.png) repeat, background-size 16px 16px over #f9f9f6", "purpose": "Woven PP sack ground on body and sticky hem." },
+      { "name": "chain-stitch-hem", "value": "16x8 SVG loop path, stroke #d6231c 1.6, repeat-x, 8px tall", "purpose": "Stitched hem under the header and at the bottom of the footer." }
+    ],
+    "shadows": [
+      { "name": "stamp-keyline", "value": "inset 0 0 0 2px #f9f9f6", "purpose": "Printed inner keyline on the red stamp button (inverts to inset red on the order tag)." },
+      { "name": "tag-frame", "value": "inset 0 0 0 6px #d6231c, inset 0 0 0 8px #f9f9f6", "purpose": "Thin white frame printed inside the red order tag." }
+    ],
+    "motion": [
+      { "name": "stamp-hover", "value": "background-color 160ms ease-out, color 160ms ease-out", "purpose": "Stamp fill change on hover." },
+      { "name": "reprint", "value": "620ms cubic-bezier(0.16, 1, 0.3, 1); black from translate(5px,-3px), red from translate(-6px,4px), opacity 0.35, blur 0.6px", "purpose": "Language switch re-prints the sack with the two inks out of register, then settling. Off under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "packs-2up", "value": "68rem" },
+      { "name": "single-column", "value": "52rem" },
+      { "name": "narrow", "value": "30rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Red Stamp",
+      "kind": "button",
+      "refersTo": "stamp-primary",
+      "description": "Primary action, rubber-stamped red with an inner sack keyline.",
+      "html": "<a class=\"ds-stamp\" href=\"#\">Request a quote</a>",
+      "css": ".ds-stamp { display: inline-flex; align-items: center; gap: 0.55rem; font: 800 1rem/1 Archivo, sans-serif; font-stretch: 115%; text-transform: uppercase; letter-spacing: 0.04em; text-decoration: none; color: #f9f9f6; background: #d6231c; border: 3px solid #d6231c; box-shadow: inset 0 0 0 2px #f9f9f6; padding: 1rem 1.35rem 0.95rem; border-radius: 0; transition: background-color 160ms ease-out, color 160ms ease-out; } .ds-stamp:hover { background: #a8150f; border-color: #a8150f; } .ds-stamp:focus-visible { outline: 3px solid #d6231c; outline-offset: 3px; }"
+    },
+    {
+      "name": "Line Stamp",
+      "kind": "button",
+      "refersTo": "stamp-line",
+      "description": "Secondary action, black ink outline that reverses to solid on hover.",
+      "html": "<a class=\"ds-stamp-line\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path d=\"M4 5h16v11H9l-5 4z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\"/></svg>Chat on LINE</a>",
+      "css": ".ds-stamp-line { display: inline-flex; align-items: center; gap: 0.55rem; font: 800 1rem/1 Archivo, sans-serif; font-stretch: 115%; text-transform: uppercase; letter-spacing: 0.04em; text-decoration: none; color: #141210; background: transparent; border: 3px solid #141210; padding: 1rem 1.35rem 0.95rem; border-radius: 0; transition: background-color 160ms ease-out, color 160ms ease-out; } .ds-stamp-line:hover { background: #141210; color: #f9f9f6; } .ds-stamp-line:focus-visible { outline: 3px solid #d6231c; outline-offset: 3px; }"
+    },
+    {
+      "name": "Language Boxes",
+      "kind": "nav",
+      "refersTo": "lang-box",
+      "description": "Joined 2px-ruled language boxes; active is solid ink.",
+      "html": "<div class=\"ds-langs\"><button aria-pressed=\"true\">EN</button><button aria-pressed=\"false\">ไทย</button><button aria-pressed=\"false\">中文</button><button aria-pressed=\"false\">عربي</button></div>",
+      "css": ".ds-langs { display: flex; } .ds-langs button { font: 700 0.85rem/1 Archivo, Kanit, 'Noto Kufi Arabic', sans-serif; color: #141210; background: transparent; border: 2px solid #141210; margin-inline-start: -2px; padding: 0.5rem 0.6rem 0.45rem; border-radius: 0; cursor: pointer; } .ds-langs button:hover { color: #d6231c; } .ds-langs button[aria-pressed='true'] { background: #141210; color: #f9f9f6; } .ds-langs button:focus-visible { outline: 3px solid #d6231c; outline-offset: 3px; }"
+    },
+    {
+      "name": "Pack Card",
+      "kind": "card",
+      "refersTo": "pack-add",
+      "description": "Ink-ruled pack box: boxed photo, red weight, name, price, black add bar.",
+      "html": "<article class=\"ds-pack\"><div class=\"ds-pack-img\"></div><p class=\"ds-pack-w\">200 G</p><h3>Thai Wagyu flat iron slices</h3><p class=\"ds-pack-p\">120 THB</p><button class=\"ds-pack-add\">+ Add to order</button></article>",
+      "css": ".ds-pack { border: 3px solid #141210; background: #f9f9f6; display: flex; flex-direction: column; max-width: 18rem; font-family: Archivo, sans-serif; color: #141210; } .ds-pack-img { aspect-ratio: 1; background: #d6231c; border-bottom: 3px solid #141210; } .ds-pack-w { margin: 0; font: 900 3rem/1 Archivo, sans-serif; font-stretch: 125%; color: #d6231c; padding: 0.9rem 1rem 0; } .ds-pack h3 { margin: 0; font-size: 1.25rem; font-weight: 800; font-stretch: 110%; padding: 0.5rem 1rem 0; line-height: 1.2; } .ds-pack-p { margin: 0; padding: 1rem 1rem 0.75rem; font-weight: 800; font-size: 1.3rem; font-variant-numeric: tabular-nums; } .ds-pack-add { font: 800 0.9rem/1 Archivo, sans-serif; font-stretch: 112%; text-transform: uppercase; letter-spacing: 0.04em; color: #f9f9f6; background: #141210; border: 0; border-top: 3px solid #141210; padding: 0.95rem; cursor: pointer; } .ds-pack-add:hover { background: #d6231c; } .ds-pack-add:focus-visible { outline: 3px solid #d6231c; outline-offset: 3px; }"
+    },
+    {
+      "name": "Spec Panel",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "Ruled tabular spec rows with red uppercase keys, like a sack's side-panel print.",
+      "html": "<dl class=\"ds-spec\"><div><dt>Origin</dt><dd>Thung Kula Rong Hai, Roi Et</dd></div><div><dt>Standard</dt><dd>ISO 22000:2018 · valid to 27.03.2027</dd></div></dl>",
+      "css": ".ds-spec { margin: 0; border-bottom: 2px solid #141210; max-width: 40rem; font-family: Archivo, sans-serif; color: #141210; } .ds-spec div { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1rem; padding: 0.55rem 0; border-top: 2px solid #141210; } .ds-spec dt { font-weight: 800; font-stretch: 115%; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.06em; color: #d6231c; padding-top: 0.2em; } .ds-spec dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums lining-nums; }"
+    },
+    {
+      "name": "Order Tag Field",
+      "kind": "input",
+      "refersTo": "slip-field",
+      "description": "Borderless sack-white field printed on the red order tag.",
+      "html": "<div class=\"ds-tag\"><label>Your name<input type=\"text\"></label></div>",
+      "css": ".ds-tag { background: #d6231c; color: #f9f9f6; padding: 1.5rem; box-shadow: inset 0 0 0 6px #d6231c, inset 0 0 0 8px #f9f9f6; font-family: Archivo, sans-serif; } .ds-tag label { display: grid; gap: 0.3rem; font-weight: 700; font-size: 0.95rem; } .ds-tag input { font: 400 1rem/1.4 Archivo, sans-serif; color: #141210; background: #f9f9f6; border: 0; border-radius: 0; padding: 0.7rem 0.75rem; caret-color: #d6231c; } .ds-tag input:focus-visible { outline: 3px solid #141210; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Thung Kula Export Sack",
+    "overview": "The whole site is one printed sack of the kind Thung Kula rice already ships in: two flexo inks, KULA red and black, laid on white woven polypropylene. There is no third colour and no grey; everything that would normally be a tint is instead carried by the weave texture underneath or by how much ink is laid down (a hairline rule versus a 3px rule versus a solid red block). Lettering is extended heavy grotesk, the way sack printers set product names, and data is set as ruled tabular rows like the spec panel on a sack's side.\n\nDensity is generous in the vertical (sections separated by full 3px ink rules) and tight inside the print boxes. Photos are never floated on the ground; they sit in ink-ruled boxes like images printed into a registered frame. The page is stitched shut: a red chain-stitch hem runs under the sticky header and above the bottom edge of the footer.\n\nThe site rejects the black-and-gold steakhouse look. It is a working export package, not a restaurant menu.",
+    "keyCharacteristics": [
+      "Two inks only (red, black) on a woven white ground tile (asset/site/weave.png at 16px).",
+      "Archivo at 125% width, weight 900, for every Latin display line; Kanit for Thai, Noto Kufi Arabic for Arabic.",
+      "Square corners everywhere; 3px and 2px solid ink rules do all the structuring.",
+      "Ruled spec rows with red uppercase labels and tabular figures.",
+      "A single reverse-printed red tag (the order slip) is the only large red field.",
+      "Red chain-stitch hem top and bottom.",
+      "Language switch \"reprints\" the sack: red and black layers land out of register and settle."
+    ],
+    "rules": [
+      { "name": "The Two Inks Rule", "body": "Only KULA Red and Sack Ink print on the sack. No greys, no opacity tints, no third hue. If something needs to recede, give it a thinner rule or a lighter weight, not a lighter colour.", "section": "colors" },
+      { "name": "The One Red Field Rule", "body": "Red is used for marks, lines and type everywhere, but a full red field appears once per page: the order tag. Buttons count as stamps, not fields.", "section": "colors" },
+      { "name": "The Stretched Caps Rule", "body": "Display and labels in Latin are extended (110–125% width) and uppercase; reading text stays at 100% width, sentence case.", "section": "typography" },
+      { "name": "The Tabular Spec Rule", "body": "Every number that is data (weights, prices, certificate numbers, dates, quantities) uses tabular lining figures.", "section": "typography" },
+      { "name": "The Printed Depth Rule", "body": "Nothing lifts off the sack. If a surface needs separation, rule it or reverse it.", "section": "elevation" }
+    ],
+    "dos": [
+      "**Do** lay every surface on the woven sack ground (#f9f9f6 with the weave tile at 16px).",
+      "**Do** frame every photo in a 3px ink-ruled box with zero radius.",
+      "**Do** set Latin display text in Archivo 900 at 125% width, uppercase for section titles.",
+      "**Do** put data in ruled tabular rows with red uppercase keys and tabular figures.",
+      "**Do** keep the red chain-stitch hem at the top and bottom of the page.",
+      "**Do** loosen line-height to 1.25 and drop to 800 for Thai and Arabic headlines."
+    ],
+    "donts": [
+      "**Don't** introduce greys, tints or a third colour; recede with thinner rules or lighter weight instead.",
+      "**Don't** add drop shadows, gradients or rounded corners.",
+      "**Don't** use more than one full red field per page; the order tag owns it.",
+      "**Don't** drift toward the black-and-gold steakhouse look the world was built to refuse.",
+      "**Don't** float photos on the ground without their ink box."
+    ]
+  }
+}
