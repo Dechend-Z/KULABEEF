@@ -198,6 +198,7 @@ function setLang(next, animate = true) {
     void document.body.offsetWidth;
     document.body.classList.add("reprint");
   }
+  slipTextEl.setAttribute("aria-label", t("order-title"));
   try { localStorage.setItem("kb-lang", lang); } catch (e) {}
 }
 
@@ -283,10 +284,11 @@ form.addEventListener("submit", async (e) => {
 
   const text = slipText(new FormData(form));
   if (e.submitter && e.submitter.dataset.via === "line") {
-    // open LINE inside the click gesture, before any await, so mobile browsers allow it
+    // start the copy while this tab still has focus, then open LINE inside the click gesture, then wait
+    const copying = navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject(new Error("no clipboard"));
     window.open(LINE_URL, "_blank", "noopener");
     try {
-      await navigator.clipboard.writeText(text);
+      await copying;
       copiedEl.textContent = t("copied");
     } catch (err) {
       copiedEl.textContent = t("copy-fail");
