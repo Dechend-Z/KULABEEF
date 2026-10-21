@@ -1,0 +1,53 @@
+{
+  "title": "KULA BEEF — เลือกโลกภาพของเว็บ",
+  "question": "ทิศทางที่สุ่มได้คือ 'กระสอบข้าวทุ่งกุลา' เลือกใช้ เลือกทางเลือกอื่น หรือสุ่มใหม่",
+  "options": [
+    {
+      "id": "assigned",
+      "kind": "assigned",
+      "label": "กระสอบข้าวทุ่งกุลา (Thung Kula Sack Print)",
+      "kicker": "THE ROLL",
+      "lineage": "กระสอบข้าวหอมมะลิทุ่งกุลาร้องไห้ / export rice sacks",
+      "thesis": "ทั้งเว็บคือกระสอบส่งออกจากทุ่งกุลา พิมพ์สกรีนสีแดง KULA บนเนื้อสานขาว — ของที่ผู้นำเข้าเคยจับมาแล้ว",
+      "palette": ["#f4f1ea", "#d6231c", "#141210", "#e9e3d6"],
+      "materials": ["ผ้าสาน PP สีขาว", "หมึกสกรีน flexo 2 สี", "ตะเข็บด้ายเย็บปากถุง"],
+      "viewport": "โลโก้หัววัวแดงยักษ์พิมพ์บนกระสอบเต็มจอ, ชื่อ KULA BEEF ตัวหนาแบบสกรีน, แถบตะเข็บด้านบนคือเมนู, ปุ่ม 'ขอใบเสนอราคา' เป็นตราประทับแดง",
+      "risk": "ถ้าลายสานกับหมึกทำไม่ถึง จะดูเป็นแค่พื้นขาวตัวแดงธรรมดา",
+      "raised": [
+        { "from": "challenger-riley", "raise": "หมึกแค่สองสี แดงกับดำ ไม่มีเทา — ความลึกมาจากความถี่ของลายสานเท่านั้น" },
+        { "from": "challenger-exposure", "raise": "ข้อมูลสเปก (น้ำหนัก ราคา เลขใบรับรอง วันหมดอายุ) ตั้งเป็นตารางตัวเลขเท่ากันแบบป้ายข้างกระสอบ" }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "kind": "pick",
+      "label": "แผนผังชิ้นส่วนเนื้อ (Butcher's Cut Chart)",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "ผังชิ้นส่วนโคของคนขายเนื้อ / spec sheet",
+      "thesis": "ตัววัวเส้นแดงเต็มจอ แต่ละสินค้าชี้กลับไปที่ชิ้นส่วนบนตัววัว",
+      "palette": ["#ffffff", "#c8201a", "#1a1a1a"],
+      "materials": ["เส้นวาดแดง", "กระดาษ spec ขาว"],
+      "viewport": "ภาพวัวเส้นแดงพร้อมชิ้น ใบพาย/สเต็ก ที่กดได้ ข้างๆ คือปุ่มติดต่อ",
+      "risk": "เว็บเนื้อส่วนใหญ่ใช้ผังชิ้นส่วนแบบนี้ ไม่โดดเด่น"
+    },
+    { "id": "challenger-riley", "kind": "challenger", "catalogId": "design-canon-riley-moire-gallery", "label": "Riley Moiré Gallery", "verdict": "declined", "lineage": "op-art gallery", "thesis": "ลายคลื่นขาวดำ", "palette": ["#000000", "#ffffff"], "materials": ["flat paint"], "viewport": "ผืนคลื่นขาวดำเต็มจอ", "risk": "ผู้ซื้อเนื้อไม่เชื่อมโยง", "case": "ผู้ซื้อเนื้อไม่เห็นตัวเองในงาน op-art", "kept": "วินัยสองสี ไม่มีเทา" },
+    { "id": "challenger-exposure", "kind": "challenger", "catalogId": "operate-b-exposure-record-zone-sheets", "label": "Exposure Record", "verdict": "declined", "lineage": "darkroom record cards", "thesis": "แผ่นบันทึกห้องมืด", "palette": ["#d9d6cf", "#2a2a2a", "#c2188a"], "materials": ["tracing paper"], "viewport": "แผ่นซ้อนบนสเกลโทน", "risk": "เป็นเครื่องมือทำงาน ไม่ใช่การขาย", "case": "ไม่เกี่ยวกับเนื้อหรือทุ่งกุลา", "kept": "ตัวเลขตารางเท่ากันสำหรับข้อมูลสเปก" },
+    { "id": "challenger-drum", "kind": "challenger", "catalogId": "signals-instruments-drum-machine-step-row", "label": "Drum Machine Step Row", "verdict": "declined", "lineage": "80s rhythm machines", "thesis": "แถวปุ่ม 16 จังหวะ", "palette": ["#2b2b2b", "#e33", "#f80", "#fd3"], "materials": ["plastic keys", "LED"], "viewport": "แถวปุ่มสี", "risk": "ของเล่น ไม่ใช่ซัพพลายเออร์", "case": "ไม่ช่วยความน่าเชื่อถือการส่งออก", "kept": "แถวเดียวที่ไม่หักบรรทัด" },
+    { "id": "challenger-raku", "kind": "challenger", "catalogId": "clay-ceramics-fracture-raku-smoke-flash", "label": "Raku Smoke Flash", "verdict": "declined", "lineage": "raku firing", "thesis": "ดินเผาดำ เคลือบเงิน", "palette": ["#121110", "#d9d9d4", "#f06a1c"], "materials": ["soot clay", "crackle glaze"], "viewport": "ภาชนะร้อนในควัน", "risk": "สื่อถึงเครื่องปั้น ไม่ใช่เนื้อ", "case": "ไม่ตรงกับเรื่องทุ่งกุลา", "kept": "สีส้มร้อนใช้กับสิ่งเดียวที่กำลังทำงาน" },
+    { "id": "challenger-quilt", "kind": "challenger", "catalogId": "textiles-weave-drape-fashion-memory-quilt-atlas", "label": "Memory Quilt", "verdict": "declined", "lineage": "pieced quilts", "thesis": "ผ้าปะความทรงจำ", "palette": ["#6f8fb0", "#111", "#c62828"], "materials": ["worn cloth"], "viewport": "บล็อกผ้าไม่เท่ากัน", "risk": "อ่อนไหวเกินไปสำหรับ B2B", "case": "ไม่ช่วยความชัดเจนของสินค้า", "kept": "ทุกคำบรรยายเย็บติดกับวัตถุของมัน" },
+    { "id": "challenger-quiz", "kind": "challenger", "catalogId": "pop-culture-shelf-teen-magazine-quiz", "label": "Teen Magazine Quiz", "verdict": "declined", "lineage": "90s teen magazines", "thesis": "ควิซนิตยสาร", "palette": ["#ff3fa4", "#b6ff00", "#fff"], "materials": ["newsprint", "gel pen"], "viewport": "คอลลาจควิซ", "risk": "ผิดกลุ่มเป้าหมาย", "case": "ผู้ซื้อส่งออกไม่ใช่วัยรุ่น", "kept": "ปลายทางชัดเจนที่ท้ายหน้า" }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false },
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "มาตรฐานของหมวดนี้ (Premium steakhouse)",
+    "thesis": "พื้นดำ ตัวอักษรทองเซอริฟ รูปสเต็กใหญ่ แบบเว็บเนื้อพรีเมียมทั่วไป",
+    "palette": ["#0e0d0c", "#c9a45c", "#f2ede4"],
+    "materials": ["พื้นดำ", "ภาพอาหาร"],
+    "viewport": "ภาพสเต็กเต็มจอ หัวข้อทอง ปุ่มติดต่อ",
+    "risk": "เหมือนทุกเจ้าในตลาด"
+  },
+  "steer": true
+}

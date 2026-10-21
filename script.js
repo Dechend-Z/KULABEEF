@@ -1,327 +1,289 @@
-// script.js
+// KULA BEEF: language re-print + order slip
 
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Navbar Scroll Effect
-    const navbar = document.getElementById('navbar');
+const T = {
+  en: {
+    "skip": "Skip to products",
+    "nav-cuts": "Cuts", "nav-origin": "Origin", "nav-plant": "Standard", "nav-contact": "Contact",
+    "origin-line": "Thai Wagyu · Thung Kula Rong Hai",
+    "hook": "Beef from the Thung Kula cattle network in Roi Et, northeast Thailand, cut and packed in an ISO 22000 certified plant. Supplying importers, distributors and kitchens.",
+    "s-origin": "Origin", "v-origin": "Thung Kula Rong Hai, Roi Et, Thailand",
+    "s-proc": "Processor", "s-std": "Standard", "v-valid": "valid to",
+    "s-cuts": "Cuts", "v-cuts": "Flat iron slices · Wagyu slices · Steak · Half-dried beef",
+    "cta-quote": "Request a quote", "cta-line": "Chat on LINE",
+    "cuts-title": "Net weight, per pack",
+    "cuts-note": "Retail prices in Thai baht. Export and wholesale prices on request.",
+    "p-flatiron": "Thai Wagyu flat iron slices", "d-flatiron": "Chuck tender (ใบพาย), sliced for grill, shabu and stir-fry.",
+    "p-slice": "Wagyu slices", "d-slice": "Thin marbled slices for hot pot and sukiyaki.",
+    "p-steak": "Beef steak", "d-steak": "Steak-cut beef for the grill or pan.",
+    "p-halfdried": "Half-dried beef", "d-halfdried": "Sun-dried Isan style (เนื้อครึ่งแดด), ready to fry.",
+    "add": "Add to order", "added": "On the slip",
+    "origin-title": "From dry land to premium beef",
+    "origin-1": "Thung Kula Rong Hai is a plain of 2.6 million rai across northeast Thailand, about 980,000 rai of it in Roi Et. It was once known as dry and hard to farm. Families here grow rice and raise cattle, and the cattle bring in much of the income.",
+    "origin-2": "The Thung Kula cattle network brings a new generation of farmers together to raise the value of that herd, so the families who raise it earn more from it.",
+    "f-plain": "Thung Kula plain", "f-roiet": "In Roi Et", "rai": "rai",
+    "plant-title": "Processed to ISO 22000",
+    "plant-1": "KULA BEEF is cut and packed by Nakhonphanom Beef (Thailand) Co., Ltd., whose food safety management system is registered to ISO 22000:2018 for the manufacturing and processing of meat.",
+    "c-body": "Certified by", "c-no": "Certificate", "c-dates": "Valid", "c-check": "Verify",
+    "cert-cap": "Tap to open the full certificate.", "room-cap": "The cutting room.",
+    "order-title": "Order slip",
+    "order-note": "Add packs from the list above, tell us who you are, and send the slip by email or LINE. We reply with export prices and terms.",
+    "slip-empty": "Nothing on the slip yet. Use “Add to order” on a pack above.",
+    "f-name": "Your name", "f-company": "Company", "f-country": "Country",
+    "f-note": "Note (volumes, destination, questions)",
+    "f-error": "Please add your name, and at least one pack or a note.",
+    "send-email": "Send by email", "send-line": "Copy & open LINE",
+    "copied": "Slip copied. Paste it into the LINE chat that just opened.",
+    "copy-fail": "Could not copy automatically. Select the slip text and copy it, then send it on LINE.",
+    "contact-title": "Export desk",
+    "role": "Export Manager", "phone": "Phone", "email": "Email", "map": "On the map",
+    "address": "Roi Et, Thailand 45190",
+    "sister": "Same export desk, halal processed beef from Satun:",
+    "slip-head": "Order slip: KULA BEEF", "slip-from": "From", "slip-items": "Packs", "slip-note": "Note",
+    "subject": "Quote request: KULA BEEF"
+  },
+  th: {
+    "skip": "ข้ามไปที่สินค้า",
+    "nav-cuts": "สินค้า", "nav-origin": "ที่มา", "nav-plant": "มาตรฐาน", "nav-contact": "ติดต่อ",
+    "origin-line": "ไทยวากิว · ทุ่งกุลาร้องไห้",
+    "hook": "เนื้อวัวจากเครือข่ายโคเนื้อทุ่งกุลา จังหวัดร้อยเอ็ด ตัดแต่งและบรรจุในโรงงานที่ได้รับรอง ISO 22000 พร้อมส่งให้ผู้นำเข้า ผู้จัดจำหน่าย และร้านอาหาร",
+    "s-origin": "แหล่งที่มา", "v-origin": "ทุ่งกุลาร้องไห้ ร้อยเอ็ด ประเทศไทย",
+    "s-proc": "ผู้แปรรูป", "s-std": "มาตรฐาน", "v-valid": "ใช้ได้ถึง",
+    "s-cuts": "สินค้า", "v-cuts": "เนื้อสไลด์ใบพาย · เนื้อสไลด์วากิว · เนื้อสเต็ก · เนื้อครึ่งแดด",
+    "cta-quote": "ขอใบเสนอราคา", "cta-line": "คุยทาง LINE",
+    "cuts-title": "น้ำหนักสุทธิต่อแพ็ก",
+    "cuts-note": "ราคาขายปลีกเป็นบาท ราคาส่งและราคาส่งออกสอบถามได้",
+    "p-flatiron": "เนื้อสไลด์ใบพาย ไทยวากิว", "d-flatiron": "ส่วนใบพาย สไลด์พร้อมย่าง ชาบู หรือผัด",
+    "p-slice": "เนื้อสไลด์วากิว", "d-slice": "สไลด์บาง ลายไขมันสวย สำหรับชาบูและสุกี้ยากี้",
+    "p-steak": "เนื้อสเต็ก", "d-steak": "ตัดหนาสำหรับย่างหรือทอดในกระทะ",
+    "p-halfdried": "เนื้อครึ่งแดด", "d-halfdried": "เนื้อแดดเดียวแบบอีสาน พร้อมทอด",
+    "add": "ใส่ใบสั่ง", "added": "อยู่ในใบสั่งแล้ว",
+    "origin-title": "จากแผ่นดินแห้งแล้ง สู่เนื้อวัวชั้นเลิศ",
+    "origin-1": "ทุ่งกุลาร้องไห้มีพื้นที่ 2.6 ล้านไร่ในภาคอีสาน อยู่ในจังหวัดร้อยเอ็ดกว่า 980,000 ไร่ ที่นี่เคยได้ชื่อว่าแห้งแล้งและทุรกันดาร เกษตรกรทำนาเป็นหลักและเลี้ยงวัวเป็นอาชีพรอง แต่รายได้หลักมาจากการเลี้ยงสัตว์",
+    "origin-2": "เครือข่ายโคเนื้อทุ่งกุลารวมเกษตรกรรุ่นใหม่ เพื่อยกระดับมูลค่าของวัวที่เลี้ยง ให้พี่น้องเกษตรกรมีรายได้มากขึ้น",
+    "f-plain": "ทุ่งกุลาร้องไห้", "f-roiet": "ในจังหวัดร้อยเอ็ด", "rai": "ไร่",
+    "plant-title": "แปรรูปตามมาตรฐาน ISO 22000",
+    "plant-1": "KULA BEEF ตัดแต่งและบรรจุโดย บริษัท นครพนม บีฟ (ไทยแลนด์) จำกัด ซึ่งระบบการจัดการความปลอดภัยอาหารได้รับการรับรอง ISO 22000:2018 สำหรับการผลิตและแปรรูปเนื้อสัตว์",
+    "c-body": "ผู้ให้การรับรอง", "c-no": "เลขที่ใบรับรอง", "c-dates": "ระยะเวลา", "c-check": "ตรวจสอบ",
+    "cert-cap": "แตะเพื่อเปิดใบรับรองฉบับเต็ม", "room-cap": "ห้องตัดแต่งเนื้อ",
+    "order-title": "ใบสั่งสินค้า",
+    "order-note": "เลือกแพ็กจากรายการด้านบน กรอกชื่อ แล้วส่งใบสั่งทางอีเมลหรือ LINE เราจะตอบกลับพร้อมราคาและเงื่อนไข",
+    "slip-empty": "ยังไม่มีสินค้าในใบสั่ง กด “ใส่ใบสั่ง” ที่แพ็กด้านบน",
+    "f-name": "ชื่อ", "f-company": "บริษัท/ร้าน", "f-country": "ประเทศ",
+    "f-note": "หมายเหตุ (จำนวน ปลายทาง คำถาม)",
+    "f-error": "กรุณากรอกชื่อ และเลือกสินค้าอย่างน้อยหนึ่งแพ็กหรือเขียนหมายเหตุ",
+    "send-email": "ส่งทางอีเมล", "send-line": "คัดลอกแล้วเปิด LINE",
+    "copied": "คัดลอกใบสั่งแล้ว วางในแชท LINE ที่เปิดขึ้นมาได้เลย",
+    "copy-fail": "คัดลอกอัตโนมัติไม่ได้ กรุณาคัดลอกข้อความใบสั่งเองแล้วส่งทาง LINE",
+    "contact-title": "ฝ่ายส่งออก",
+    "role": "ผู้จัดการฝ่ายส่งออก", "phone": "โทร", "email": "อีเมล", "map": "แผนที่",
+    "address": "ร้อยเอ็ด 45190",
+    "sister": "ฝ่ายส่งออกเดียวกัน เนื้อแปรรูปฮาลาลจากสตูล:",
+    "slip-head": "ใบสั่งสินค้า: KULA BEEF", "slip-from": "จาก", "slip-items": "สินค้า", "slip-note": "หมายเหตุ",
+    "subject": "ขอใบเสนอราคา: KULA BEEF"
+  },
+  zh: {
+    "skip": "跳到产品",
+    "nav-cuts": "产品", "nav-origin": "产地", "nav-plant": "标准", "nav-contact": "联系",
+    "origin-line": "泰国和牛 · 通库拉荣海",
+    "hook": "来自泰国东北部黎逸府通库拉肉牛网络的牛肉，在 ISO 22000 认证工厂分割包装。供应进口商、经销商和餐厅。",
+    "s-origin": "产地", "v-origin": "泰国黎逸府通库拉荣海平原",
+    "s-proc": "加工商", "s-std": "标准", "v-valid": "有效期至",
+    "s-cuts": "产品", "v-cuts": "板腱肉片 · 和牛肉片 · 牛排 · 半干牛肉",
+    "cta-quote": "索取报价", "cta-line": "LINE 联系",
+    "cuts-title": "每包净重",
+    "cuts-note": "零售价以泰铢计。出口及批发价格请询价。",
+    "p-flatiron": "泰国和牛板腱肉片", "d-flatiron": "板腱部位切片，适合烧烤、涮锅和炒菜。",
+    "p-slice": "和牛肉片", "d-slice": "大理石纹薄切片，适合火锅和寿喜烧。",
+    "p-steak": "牛排", "d-steak": "厚切牛排，适合烧烤或煎。",
+    "p-halfdried": "半干牛肉", "d-halfdried": "泰国东北风味日晒牛肉，可直接油炸。",
+    "add": "加入订单", "added": "已在订单中",
+    "origin-title": "从干旱之地到优质牛肉",
+    "origin-1": "通库拉荣海平原横跨泰国东北部，面积 260 万莱，其中约 98 万莱位于黎逸府。这里曾以干旱贫瘠著称。农户以种稻为主业、养牛为副业，但主要收入来自养牛。",
+    "origin-2": "通库拉肉牛网络把新一代农户聚集起来，提升牛群的价值，让养牛的家庭获得更多收入。",
+    "f-plain": "通库拉平原", "f-roiet": "黎逸府境内", "rai": "莱",
+    "plant-title": "按 ISO 22000 加工",
+    "plant-1": "KULA BEEF 由 Nakhonphanom Beef (Thailand) Co., Ltd. 分割包装，其食品安全管理体系已通过 ISO 22000:2018 认证，范围为肉类生产与加工。",
+    "c-body": "认证机构", "c-no": "证书编号", "c-dates": "有效期", "c-check": "查验",
+    "cert-cap": "点击查看完整证书。", "room-cap": "分割车间。",
+    "order-title": "订货单",
+    "order-note": "从上方选择产品，填写您的信息，然后通过电子邮件或 LINE 发送。我们会回复出口价格和条款。",
+    "slip-empty": "订单为空。请点击上方产品的“加入订单”。",
+    "f-name": "姓名", "f-company": "公司", "f-country": "国家",
+    "f-note": "备注（数量、目的地、问题）",
+    "f-error": "请填写姓名，并至少选择一个产品或填写备注。",
+    "send-email": "通过邮件发送", "send-line": "复制并打开 LINE",
+    "copied": "订单已复制。请粘贴到刚打开的 LINE 对话中。",
+    "copy-fail": "无法自动复制。请手动复制订单内容并通过 LINE 发送。",
+    "contact-title": "出口部",
+    "role": "出口经理", "phone": "电话", "email": "电子邮件", "map": "地图",
+    "address": "泰国黎逸府 45190",
+    "sister": "同一出口部门，来自沙敦府的清真加工牛肉：",
+    "slip-head": "订货单：KULA BEEF", "slip-from": "发件人", "slip-items": "产品", "slip-note": "备注",
+    "subject": "询价：KULA BEEF"
+  },
+  ar: {
+    "skip": "انتقل إلى المنتجات",
+    "nav-cuts": "المنتجات", "nav-origin": "المنشأ", "nav-plant": "المعايير", "nav-contact": "اتصل بنا",
+    "origin-line": "واغيو تايلاندي · ثونغ كولا رونغ هاي",
+    "hook": "لحم بقري من شبكة ثونغ كولا لتربية الماشية في روي إت، شمال شرق تايلاند، يُقطَّع ويُعبَّأ في مصنع حاصل على شهادة ISO 22000. نورّد للمستوردين والموزعين والمطابخ.",
+    "s-origin": "المنشأ", "v-origin": "ثونغ كولا رونغ هاي، روي إت، تايلاند",
+    "s-proc": "جهة التصنيع", "s-std": "المعيار", "v-valid": "سارية حتى",
+    "s-cuts": "القطع", "v-cuts": "شرائح فلات آيرون · شرائح واغيو · ستيك · لحم نصف مجفف",
+    "cta-quote": "اطلب عرض سعر", "cta-line": "تواصل عبر LINE",
+    "cuts-title": "الوزن الصافي لكل عبوة",
+    "cuts-note": "أسعار التجزئة بالبات التايلاندي. أسعار التصدير والجملة عند الطلب.",
+    "p-flatiron": "شرائح فلات آيرون واغيو تايلاندي", "d-flatiron": "من قطعة الكتف، مقطعة للشواء والشابو والقلي السريع.",
+    "p-slice": "شرائح واغيو", "d-slice": "شرائح رقيقة مُرخّمة للهوت بوت والسوكيياكي.",
+    "p-steak": "ستيك لحم بقري", "d-steak": "قطع ستيك للشواء أو المقلاة.",
+    "p-halfdried": "لحم بقري نصف مجفف", "d-halfdried": "مجفف بالشمس على طريقة إيسان، جاهز للقلي.",
+    "add": "أضف إلى الطلب", "added": "في قائمة الطلب",
+    "origin-title": "من أرض جافة إلى لحم فاخر",
+    "origin-1": "ثونغ كولا رونغ هاي سهل مساحته 2.6 مليون راي في شمال شرق تايلاند، منها نحو 980,000 راي في روي إت. عُرف قديمًا بالجفاف وصعوبة الزراعة. تزرع العائلات هنا الأرز وتربي الماشية، والماشية مصدر معظم الدخل.",
+    "origin-2": "تجمع شبكة ثونغ كولا لتربية الماشية جيلًا جديدًا من المزارعين لرفع قيمة القطيع، حتى تحصل العائلات التي تربيه على دخل أكبر.",
+    "f-plain": "سهل ثونغ كولا", "f-roiet": "في روي إت", "rai": "راي",
+    "plant-title": "مُصنَّع وفق ISO 22000",
+    "plant-1": "تُقطَّع منتجات KULA BEEF وتُعبَّأ لدى شركة Nakhonphanom Beef (Thailand) Co., Ltd.، ونظام إدارة سلامة الغذاء لديها مسجل وفق ISO 22000:2018 لتصنيع اللحوم ومعالجتها.",
+    "c-body": "جهة الاعتماد", "c-no": "رقم الشهادة", "c-dates": "الصلاحية", "c-check": "التحقق",
+    "cert-cap": "اضغط لفتح الشهادة كاملة.", "room-cap": "غرفة التقطيع.",
+    "order-title": "قسيمة الطلب",
+    "order-note": "أضف العبوات من القائمة أعلاه، وأخبرنا من أنت، ثم أرسل القسيمة بالبريد الإلكتروني أو عبر LINE. سنرد بأسعار التصدير والشروط.",
+    "slip-empty": "القسيمة فارغة. استخدم «أضف إلى الطلب» على إحدى العبوات أعلاه.",
+    "f-name": "الاسم", "f-company": "الشركة", "f-country": "الدولة",
+    "f-note": "ملاحظة (الكميات، الوجهة، الأسئلة)",
+    "f-error": "يرجى كتابة اسمك، واختيار عبوة واحدة على الأقل أو كتابة ملاحظة.",
+    "send-email": "أرسل بالبريد الإلكتروني", "send-line": "انسخ وافتح LINE",
+    "copied": "تم نسخ القسيمة. الصقها في محادثة LINE التي فُتحت الآن.",
+    "copy-fail": "تعذّر النسخ تلقائيًا. انسخ نص القسيمة يدويًا وأرسله عبر LINE.",
+    "contact-title": "قسم التصدير",
+    "role": "مديرة التصدير", "phone": "الهاتف", "email": "البريد الإلكتروني", "map": "على الخريطة",
+    "address": "روي إت، تايلاند 45190",
+    "sister": "قسم التصدير نفسه، لحم بقري حلال مُصنَّع من ساتون:",
+    "slip-head": "قسيمة طلب: KULA BEEF", "slip-from": "من", "slip-items": "العبوات", "slip-note": "ملاحظة",
+    "subject": "طلب عرض سعر: KULA BEEF"
+  }
+};
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+const LANG_ATTR = { en: "en", th: "th", zh: "zh-Hans", ar: "ar" };
+const EMAIL = "ksskids@outlook.com";
+const LINE_URL = "https://line.me/ti/p/smoS2zVStO";
 
-    // 2. Mobile Hamburger Menu Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+let lang = "en";
+const slip = new Map(); // id -> qty
 
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-    }
+const packs = [...document.querySelectorAll(".pack")];
+const slipList = document.querySelector(".slip");
+const form = document.querySelector(".slip-form");
+const errorEl = form.querySelector(".form-error");
+const copiedEl = form.querySelector(".copied");
 
-    // Close mobile menu when a nav link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (hamburger.classList.contains('active')) {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            }
-        });
-    });
+const t = (key, l = lang) => T[l][key] ?? T.en[key];
 
-    // 3. Intersection Observer for Fade-in Animations
-    const fadeElements = document.querySelectorAll('.fade-in');
+function setLang(next, animate = true) {
+  lang = next;
+  const root = document.documentElement;
+  root.lang = LANG_ATTR[lang];
+  root.dir = lang === "ar" ? "rtl" : "ltr";
 
-    const observerOptions = {
-        root: null, // use the viewport
-        rootMargin: '0px',
-        threshold: 0.15 // trigger when 15% of the element is visible
-    };
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const v = t(el.dataset.i18n);
+    if (v) el.textContent = v;
+  });
+  document.querySelectorAll(".langs button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+  packs.forEach(syncPack);
+  renderSlip();
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Add the 'visible' class to trigger CSS animation
-                entry.target.classList.add('visible');
-                // Stop observing the element so it doesn't fade out and in again
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
+  if (animate) {
+    document.body.classList.remove("reprint");
+    void document.body.offsetWidth;
+    document.body.classList.add("reprint");
+  }
+  try { localStorage.setItem("kb-lang", lang); } catch (e) {}
+}
 
-    fadeElements.forEach(el => {
-        observer.observe(el);
-    });
+function syncPack(pack) {
+  const on = slip.has(pack.dataset.id);
+  pack.classList.toggle("on", on);
+  const btn = pack.querySelector(".add");
+  btn.setAttribute("aria-pressed", String(on));
+  btn.querySelector("span").textContent = on ? t("added") : t("add");
+  btn.querySelector("use").setAttribute("href", on ? "#i-minus" : "#i-plus");
+}
 
-    // 5. 3D Product Grid Carousel Logic
-    const productGrid = document.getElementById('productGrid');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
+function renderSlip() {
+  slipList.replaceChildren();
+  for (const [id, qty] of slip) {
+    const pack = packs.find((p) => p.dataset.id === id);
+    const li = document.createElement("li");
+    li.innerHTML = `<span class="n"></span>
+      <span class="qty"><button type="button" data-step="-1" aria-label="−"><svg aria-hidden="true"><use href="#i-minus"/></svg></button><output></output><button type="button" data-step="1" aria-label="+"><svg aria-hidden="true"><use href="#i-plus"/></svg></button></span>
+      <span class="s"></span>`;
+    li.querySelector(".n").textContent = t(`p-${id}`);
+    li.querySelector("output").textContent = qty;
+    li.querySelector(".s").textContent = `${(qty * Number(pack.dataset.price)).toLocaleString("en")} THB`;
+    li.querySelectorAll("[data-step]").forEach((b) => b.addEventListener("click", () => {
+      const n = qty + Number(b.dataset.step);
+      if (n <= 0) slip.delete(id); else slip.set(id, n);
+      syncPack(pack);
+      renderSlip();
+    }));
+    slipList.append(li);
+  }
+}
 
-    if (productGrid && prevBtn && nextBtn) {
-        let cards = Array.from(productGrid.querySelectorAll('.product-card'));
-        let autoScrollInterval;
-        let isAnimating = false;
-
-        const updateCards = () => {
-            cards.forEach(card => {
-                card.classList.remove('active', 'prev', 'next');
-            });
-
-            // The middle item in the array is "active"
-            // Let's treat cards[0] as active, cards[cards.length - 1] as prev, cards[1] as next
-            if (cards.length > 0) cards[0].classList.add('active');
-
-            if (cards.length > 1) {
-                cards[1].classList.add('next');
-                cards[cards.length - 1].classList.add('prev');
-            }
-        };
-
-        const moveNext = () => {
-            if (isAnimating || cards.length === 0) return;
-            isAnimating = true;
-
-            const firstCard = cards.shift(); // Remove first element
-            cards.push(firstCard); // Add to end
-            updateCards();
-
-            setTimeout(() => { isAnimating = false; }, 600); // 600ms match css transition
-        };
-
-        const movePrev = () => {
-            if (isAnimating || cards.length === 0) return;
-            isAnimating = true;
-
-            const lastCard = cards.pop(); // Remove last element
-            cards.unshift(lastCard); // Add to start
-            updateCards();
-
-            setTimeout(() => { isAnimating = false; }, 600);
-        };
-
-        const startAutoScroll = () => {
-            clearInterval(autoScrollInterval);
-            autoScrollInterval = setInterval(moveNext, 10000); // 10 seconds
-        };
-
-        const stopAutoScroll = () => {
-            clearInterval(autoScrollInterval);
-        };
-
-        nextBtn.addEventListener('click', () => {
-            stopAutoScroll();
-            moveNext();
-            startAutoScroll();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            stopAutoScroll();
-            movePrev();
-            startAutoScroll();
-        });
-
-        // Initialize display
-        updateCards();
-
-        // Optional: click on prev/next card to move
-        productGrid.addEventListener('click', (e) => {
-            const card = e.target.closest('.product-card');
-            if (card) {
-                if (card.classList.contains('next')) {
-                    stopAutoScroll(); moveNext(); startAutoScroll();
-                } else if (card.classList.contains('prev')) {
-                    stopAutoScroll(); movePrev(); startAutoScroll();
-                }
-            }
-        });
-
-        // Pause auto scroll when interacting
-        productGrid.addEventListener('mouseenter', stopAutoScroll);
-        productGrid.addEventListener('mouseleave', startAutoScroll);
-        productGrid.addEventListener('touchstart', stopAutoScroll);
-        productGrid.addEventListener('touchend', startAutoScroll);
-
-        startAutoScroll();
-    }
-
-    // 4. Language Switcher Logic
-    const translations = {
-        th: {
-            "nav-home": "หน้าแรก",
-            "nav-about": "เกี่ยวกับเรา",
-            "nav-products": "สินค้าของเรา",
-            "nav-menu": "เมนูแนะนำ",
-            "about-title": "ทำไมต้อง <span class='highlight'>KULA Beef?</span>",
-            "about-desc": "เราใส่ใจทุกขั้นตอน ตั้งแต่การคัดเลือกสายพันธุ์โค การเลี้ยงดูด้วยธัญพืชคุณภาพ จนถึงกระบวนการตัดแต่งโดยผู้เชี่ยวชาญ (Butcher) เพื่อให้ได้เนื้อที่มีลายไขมันแทรก (Marbling) ที่สวยงาม รสชาติเข้มข้น และปลอดภัยที่สุด",
-            "about-feature-1": "ฟาร์มมาตรฐาน ปลอดสารเร่งเนื้อแดง",
-            "about-feature-2": "บ่ม (Aging) อย่างพิถีพิถันเพื่อความนุ่ม",
-            "about-feature-3": "จัดส่งสะอาด ปลอดภัย ควบคุมอุณหภูมิทั่วประเทศ",
-            "prod-title": "ผลิตภัณฑ์ของเรา",
-            "prod-1": "เนื้อสไลด์ใบพาย ไทยวากิว (200g)",
-            "prod-2": "เนื้อสเต็ก",
-            "prod-3": "เนื้อครึ่งแดด (200g)",
-            "prod-4": "เนื้อสไลด์ วากิว (100g)",
-            "btn-order": "สั่งซื้อ",
-            "menu-title": "สร้างสรรค์เมนูสุดพิเศษ",
-            "menu-desc": "ยกระดับมื้ออาหารของคุณด้วยเนื้อคุณภาพจากเรา ไม่ว่าจะเป็นสเต็กเนื้อนุ่มละมุน ซุปเนื้อตุ๋นยาจีนรสกลมกล่อม หรือชาบูเนื้อสไลด์แสนอร่อย ทำมื้อธรรมดาให้กลายเป็นมื้อพิเศษได้ง่ายๆ ที่บ้านคุณ",
-            "menu-btn": "เลือกเนื้อไปทำเมนูโปรด",
-            "footer-brand1": "KULA BEEF - เนื้อพรีเมี่ยม",
-            "footer-brand2": "มุ่งมั่นส่งมอบประสบการณ์การทานเนื้อวัวที่ดีที่สุดให้คุณในทุกๆ คำ",
-            "footer-link-title": "ลิงก์ด่วน",
-            "footer-contact-title": "ติดต่อเรา",
-            "alert-cart": "🎉 เพิ่ม \"{product}\" ลงในตะกร้าสินค้าเรียบร้อยแล้ว!\n(นี่เป็นเพียงการทดลองสำหรับ Static Website)"
-        },
-        en: {
-            "nav-home": "Home",
-            "nav-about": "About Us",
-            "nav-products": "Our Products",
-            "nav-menu": "Recommended Menus",
-            "about-title": "Why <span class='highlight'>KULA Beef?</span>",
-            "about-desc": "We care about every step, from selecting cattle breeds, grain-fed nurturing, to expert butchering, ensuring the most beautiful marbling, intense flavor, and best safety.",
-            "about-feature-1": "Standard Farm, No Growth Promoters",
-            "about-feature-2": "Meticulously Aged for Tenderness",
-            "about-feature-3": "Clean & Safe Nationwide Temperature-Controlled Delivery",
-            "prod-title": "Our Products",
-            "prod-1": "Thai Wagyu Oyster Blade Sliced (200g)",
-            "prod-2": "Beef Steak",
-            "prod-3": "Sun-dried Beef (200g)",
-            "prod-4": "Wagyu Sliced Beef (100g)",
-            "btn-order": "Order Now",
-            "menu-title": "Create Special Menus",
-            "menu-desc": "Elevate your meal with our premium beef. Whether it's a tender steak, flavorful Chinese herbal beef soup, or delicious shabu-shabu slices. Turn ordinary meals into special ones at your home.",
-            "menu-btn": "Select Beef for Your Recipe",
-            "footer-brand1": "KULA BEEF - Premium Beef",
-            "footer-brand2": "Committed to delivering the best beef experience in every bite.",
-            "footer-link-title": "Quick Links",
-            "footer-contact-title": "Contact Us",
-            "alert-cart": "🎉 \"{product}\" has been added to your cart!\n(This is just a demo for the Static Website)"
-        },
-        cn: {
-            "nav-home": "首页",
-            "nav-about": "关于我们",
-            "nav-products": "我们的产品",
-            "nav-menu": "推荐菜单",
-            "about-title": "为什么选择 <span class='highlight'>KULA Beef?</span>",
-            "about-desc": "我们注重每一个细节，从挑选牛种、谷物饲养到专业屠宰，确保呈现最美丽的大理石纹、浓郁的风味和最高的安全性。",
-            "about-feature-1": "标准农场，无瘦肉精",
-            "about-feature-2": "精心熟成，肉质鲜嫩",
-            "about-feature-3": "全国温控冷链安全配送",
-            "prod-title": "我们的产品",
-            "prod-1": "泰国和牛板腱肉片 (200g)",
-            "prod-2": "牛排",
-            "prod-3": "半干牛肉 (200g)",
-            "prod-4": "和牛切片 (100g)",
-            "btn-order": "立即购买",
-            "menu-title": "打造特色菜单",
-            "menu-desc": "用我们的优质牛肉提升您的用餐体验。无论是鲜嫩的牛排、浓郁的中式清炖牛肉汤，还是美味的寿喜烧肉片。在家里轻松将普通的一餐变成特别的一餐。",
-            "menu-btn": "挑选您喜欢的食谱牛肉",
-            "footer-brand1": "KULA BEEF - 高品质牛肉",
-            "footer-brand2": "致力于让您在每一口中体验到最好的牛肉。",
-            "footer-link-title": "快速链接",
-            "footer-contact-title": "联系我们",
-            "alert-cart": "🎉 \"{product}\" 已添加到您的购物车！\n(这只是静态网站的面版展示)"
-        },
-        ar: {
-            "nav-home": "الرئيسية",
-            "nav-about": "من نحن",
-            "nav-products": "منتجاتنا",
-            "nav-menu": "القائمة الموصى بها",
-            "about-title": "لماذا <span class='highlight'>KULA Beef؟</span>",
-            "about-desc": "نحن نهتم بكل خطوة، بدءاً من اختيار سلالات الماشية، والتربية بالحبوب، وحتى التقطيع على يد خبراء لضمان أفضل دهون متخللة، ونكهة غنية، وأقصى درجات الأمان.",
-            "about-feature-1": "مزرعة نموذجية، خالية من الهرمونات",
-            "about-feature-2": "معتق بعناية ليكون أكثر طراوة",
-            "about-feature-3": "توصيل نظيف وآمن مع تحكم بدرجة الحرارة",
-            "prod-title": "منتجاتنا",
-            "prod-1": "شرائح لحم واغيو التايلاندي (200 غ)",
-            "prod-2": "شريحة لحم (ستيك)",
-            "prod-3": "لحم بقري مجفف بالشمس (200 غ)",
-            "prod-4": "شرائح لحم واغيو (100 غ)",
-            "btn-order": "اطلب الآن",
-            "menu-title": "ابتكر قوائم طعام مميزة",
-            "menu-desc": "ارتقِ بوجبتك مع لحومنا عالية الجودة. سواء كان ستيك طري، شوربة لحم بالأعشاب الصينية، أو شرائح شابو شابو لذيذة. حوّل وجباتك العادية إلى وجبات مميزة في منزلك.",
-            "menu-btn": "اختر اللحم لوصفتك المفضلة",
-            "footer-brand1": "KULA BEEF - لحم بقري فاخر",
-            "footer-brand2": "ملتزمون بتقديم أفضل تجربة لحم بقري في كل قضمة.",
-            "footer-link-title": "روابط سريعة",
-            "footer-contact-title": "اتصل بنا",
-            "alert-cart": "🎉 تمت إضافة \"{product}\" إلى عربة التسوق الخاصة بك!\n(هذا مجرد عرض تجريبي للموقع الثابت)"
-        }
-    };
-
-    let currentLang = 'th';
-    const langBtns = document.querySelectorAll('.lang-btn');
-
-    langBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Remove active class from all
-            langBtns.forEach(b => b.classList.remove('active'));
-            // Add active class to clicked
-            btn.classList.add('active');
-
-            const lang = btn.getAttribute('data-lang');
-            currentLang = lang;
-            updateLanguage(lang);
-        });
-    });
-
-    function updateLanguage(lang) {
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
-                element.innerHTML = translations[lang][key];
-            }
-        });
-
-        // Update document lang attribute
-        const htmlTag = document.querySelector('html');
-        if (lang === 'en') {
-            htmlTag.setAttribute('lang', 'en');
-            htmlTag.setAttribute('dir', 'ltr');
-        } else if (lang === 'cn') {
-            htmlTag.setAttribute('lang', 'zh-Hans');
-            htmlTag.setAttribute('dir', 'ltr');
-        } else if (lang === 'ar') {
-            htmlTag.setAttribute('lang', 'ar');
-            htmlTag.setAttribute('dir', 'rtl');
-        } else {
-            htmlTag.setAttribute('lang', 'th');
-            htmlTag.setAttribute('dir', 'ltr');
-        }
-    }
-
-    // Attach current translation dictionary to window for alert cart
-    window.siteTranslations = translations;
-    window.getCurrentLang = () => currentLang;
-
+packs.forEach((pack) => {
+  pack.querySelector(".add").addEventListener("click", () => {
+    if (slip.has(pack.dataset.id)) slip.delete(pack.dataset.id);
+    else slip.set(pack.dataset.id, 1);
+    syncPack(pack);
+    renderSlip();
+  });
 });
 
-/**
- * 5. Simple notification function for 'Add to Cart'
- * In a real application, this would interact with a cart array/object and update the UI.
- */
-function addToCart(productKey) {
-    const lang = window.getCurrentLang ? window.getCurrentLang() : 'th';
-    const dict = window.siteTranslations ? window.siteTranslations[lang] : null;
-    let alertMsg = `🎉 เพิ่ม "${productKey}" ลงในตะกร้าสินค้าเรียบร้อยแล้ว!\n(นี่เป็นเพียงการทดลองสำหรับ Static Website)`;
-
-    // Resolve Product Name
-    let productName = productKey;
-    if (dict) {
-        // Search for the product name in dict
-        if (productKey === 'เนื้อสไลด์ใบพาย ไทยวากิว') productName = dict['prod-1'].split(' (')[0];
-        if (productKey === 'เนื้อสเต็ก') productName = dict['prod-2'];
-        if (productKey === 'เนื้อครึ่งแดด') productName = dict['prod-3'].split(' (')[0];
-        if (productKey === 'เนื้อสไลด์ วากิว') productName = dict['prod-4'].split(' (')[0];
-
-        if (dict['alert-cart']) {
-            alertMsg = dict['alert-cart'].replace('{product}', productName);
-        }
+function slipText(data) {
+  const lines = [t("slip-head"), ""];
+  const from = [data.get("name"), data.get("company"), data.get("country")].filter(Boolean).join(", ");
+  lines.push(`${t("slip-from")}: ${from}`, "");
+  if (slip.size) {
+    lines.push(`${t("slip-items")}:`);
+    for (const [id, qty] of slip) {
+      const name = lang === "en" ? t(`p-${id}`) : `${t(`p-${id}`)} / ${t(`p-${id}`, "en")}`;
+      lines.push(`- ${name} × ${qty}`);
     }
-
-    alert(alertMsg);
+    lines.push("");
+  }
+  if (data.get("note")) lines.push(`${t("slip-note")}: ${data.get("note")}`);
+  return lines.join("\n");
 }
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+  const nameField = form.elements.name;
+  const hasName = !!data.get("name").trim();
+  const ok = hasName && (slip.size || data.get("note").trim());
+  nameField.setAttribute("aria-invalid", String(!hasName));
+  errorEl.hidden = !!ok;
+  copiedEl.hidden = true;
+  if (!ok) { (hasName ? form.elements.note : nameField).focus(); return; }
+
+  const text = slipText(data);
+  if (e.submitter && e.submitter.dataset.via === "line") {
+    try {
+      await navigator.clipboard.writeText(text);
+      copiedEl.textContent = t("copied");
+    } catch (err) {
+      copiedEl.textContent = t("copy-fail");
+    }
+    copiedEl.hidden = false;
+    window.open(LINE_URL, "_blank", "noopener");
+  } else {
+    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(t("subject"))}&body=${encodeURIComponent(text)}`;
+  }
+});
+
+document.querySelectorAll(".langs button").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
+
+// ?lang=th|zh|ar lets a link open in the buyer's language
+let saved = new URLSearchParams(location.search).get("lang");
+if (!T[saved]) { try { saved = localStorage.getItem("kb-lang"); } catch (e) {} }
+setLang(T[saved] ? saved : "en", false);
