@@ -75,34 +75,34 @@
       <ol class="packs">
         <li class="pack" data-id="flatiron" data-price="120">
           <figure><img src="asset/openlink/p-flatiron.jpg" alt="Thai Wagyu flat iron slices in a KULA BEEF pack" loading="lazy" width="1080" height="1080"></figure>
-          <p class="weight print"><span class="num">200</span> G</p>
+          <p class="weight print"><bdi><span class="num">200</span> G</bdi></p>
           <h3 class="print" data-i18n="p-flatiron">Thai Wagyu flat iron slices</h3>
           <p class="sub print" data-i18n="d-flatiron">Chuck tender (ใบพาย), sliced for grill, shabu and stir-fry.</p>
-          <p class="price print"><span class="num">120</span> THB</p>
+          <p class="price print"><bdi><span class="num">120</span> THB</bdi></p>
           <button type="button" class="add"><svg aria-hidden="true"><use href="#i-plus"/></svg><span data-i18n="add">Add to order</span></button>
         </li>
         <li class="pack" data-id="slice" data-price="59">
           <figure><img src="asset/beef0.jpg" alt="Marbled Wagyu slices with the KULA BEEF label" loading="lazy" width="960" height="1706"></figure>
-          <p class="weight print"><span class="num">100</span> G</p>
+          <p class="weight print"><bdi><span class="num">100</span> G</bdi></p>
           <h3 class="print" data-i18n="p-slice">Wagyu slices</h3>
           <p class="sub print" data-i18n="d-slice">Thin marbled slices for hot pot and sukiyaki.</p>
-          <p class="price print"><span class="num">59</span> THB</p>
+          <p class="price print"><bdi><span class="num">59</span> THB</bdi></p>
           <button type="button" class="add"><svg aria-hidden="true"><use href="#i-plus"/></svg><span data-i18n="add">Add to order</span></button>
         </li>
         <li class="pack" data-id="steak" data-price="150">
           <figure><img src="asset/openlink/p-steak.jpg" alt="Grilled KULA BEEF steak, sliced" loading="lazy" width="1080" height="1080"></figure>
-          <p class="weight print"><span class="num">200</span> G</p>
+          <p class="weight print"><bdi><span class="num">200</span> G</bdi></p>
           <h3 class="print" data-i18n="p-steak">Beef steak</h3>
           <p class="sub print" data-i18n="d-steak">Steak-cut beef for the grill or pan.</p>
-          <p class="price print"><span class="num">150</span> THB</p>
+          <p class="price print"><bdi><span class="num">150</span> THB</bdi></p>
           <button type="button" class="add"><svg aria-hidden="true"><use href="#i-plus"/></svg><span data-i18n="add">Add to order</span></button>
         </li>
         <li class="pack" data-id="halfdried" data-price="160">
           <figure><img src="asset/openlink/p-halfdried.jpg" alt="Vacuum-packed half-dried beef with the KULA BEEF label" loading="lazy" width="848" height="1200"></figure>
-          <p class="weight print"><span class="num">200</span> G</p>
+          <p class="weight print"><bdi><span class="num">200</span> G</bdi></p>
           <h3 class="print" data-i18n="p-halfdried">Half-dried beef</h3>
           <p class="sub print" data-i18n="d-halfdried">Sun-dried Isan style (เนื้อครึ่งแดด), ready to fry.</p>
-          <p class="price print"><span class="num">160</span> THB</p>
+          <p class="price print"><bdi><span class="num">160</span> THB</bdi></p>
           <button type="button" class="add"><svg aria-hidden="true"><use href="#i-plus"/></svg><span data-i18n="add">Add to order</span></button>
         </li>
       </ol>
@@ -114,9 +114,9 @@
         <h2 id="origin-title" class="print" data-i18n="origin-title">From dry land to premium beef</h2>
         <p class="print" data-i18n="origin-1">Thung Kula Rong Hai is a plain of 2.6 million rai across northeast Thailand, about 980,000 rai of it in Roi Et. It was once known as dry and hard to farm. Families here grow rice and raise cattle, and the cattle bring in much of the income.</p>
         <p class="print" data-i18n="origin-2">The Thung Kula cattle network brings a new generation of farmers together to raise the value of that herd, so the families who raise it earn more from it.</p>
-        <dl class="figures print">
-          <div><dt data-i18n="f-plain">Thung Kula plain</dt><dd><span class="num">2,600,000</span> <span data-i18n="rai">rai</span></dd></div>
-          <div><dt data-i18n="f-roiet">In Roi Et</dt><dd><span class="num">980,000</span> <span data-i18n="rai">rai</span></dd></div>
+        <dl class="spec print">
+          <div><dt data-i18n="f-plain">Thung Kula plain</dt><dd><bdi class="num">2,600,000</bdi> <span data-i18n="rai">rai</span></dd></div>
+          <div><dt data-i18n="f-roiet">In Roi Et</dt><dd><bdi class="num">980,000</bdi> <span data-i18n="rai">rai</span></dd></div>
         </dl>
       </div>
     </section>
@@ -153,6 +153,7 @@
             <button type="submit" class="stamp stamp-line" data-via="line"><svg aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="send-line">Copy &amp; open LINE</span></button>
           </div>
           <p class="copied" role="status" hidden></p>
+          <textarea class="slip-text" readonly rows="6" hidden aria-label="Order slip text"></textarea>
         </form>
       </div>
     </section>

@@ -5,7 +5,7 @@ const T = {
     "skip": "Skip to products",
     "nav-cuts": "Cuts", "nav-origin": "Origin", "nav-plant": "Standard", "nav-contact": "Contact",
     "origin-line": "Thai Wagyu · Thung Kula Rong Hai",
-    "hook": "Beef from the Thung Kula cattle network in Roi Et, northeast Thailand, cut and packed in an ISO 22000 certified plant. Supplying importers, distributors and kitchens.",
+    "hook": "Beef from the Thung Kula cattle network in Roi Et, northeast Thailand, cut and packed in an ISO 22000 certified plant. For importers, distributors and kitchens.",
     "s-origin": "Origin", "v-origin": "Thung Kula Rong Hai, Roi Et, Thailand",
     "s-proc": "Processor", "s-std": "Standard", "v-valid": "valid to",
     "s-cuts": "Cuts", "v-cuts": "Flat iron slices · Wagyu slices · Steak · Half-dried beef",
@@ -19,7 +19,7 @@ const T = {
     "add": "Add to order", "added": "On the slip",
     "origin-title": "From dry land to premium beef",
     "origin-1": "Thung Kula Rong Hai is a plain of 2.6 million rai across northeast Thailand, about 980,000 rai of it in Roi Et. It was once known as dry and hard to farm. Families here grow rice and raise cattle, and the cattle bring in much of the income.",
-    "origin-2": "The Thung Kula cattle network brings a new generation of farmers together to raise the value of that herd, so the families who raise it earn more from it.",
+    "origin-2": "The Thung Kula cattle network brings a new generation of farmers together, aiming to raise the value of the herd and the income of the families who raise it.",
     "f-plain": "Thung Kula plain", "f-roiet": "In Roi Et", "rai": "rai",
     "plant-title": "Processed to ISO 22000",
     "plant-1": "KULA BEEF is cut and packed by Nakhonphanom Beef (Thailand) Co., Ltd., whose food safety management system is registered to ISO 22000:2018 for the manufacturing and processing of meat.",
@@ -33,7 +33,7 @@ const T = {
     "f-error": "Please add your name, and at least one pack or a note.",
     "send-email": "Send by email", "send-line": "Copy & open LINE",
     "copied": "Slip copied. Paste it into the LINE chat that just opened.",
-    "copy-fail": "Could not copy automatically. Select the slip text and copy it, then send it on LINE.",
+    "copy-fail": "Could not copy automatically. Copy the slip text below and paste it into the LINE chat.", "less": "Remove one", "more": "Add one",
     "contact-title": "Export desk",
     "role": "Export Manager", "phone": "Phone", "email": "Email", "map": "On the map",
     "address": "Roi Et, Thailand 45190",
@@ -45,7 +45,7 @@ const T = {
     "skip": "ข้ามไปที่สินค้า",
     "nav-cuts": "สินค้า", "nav-origin": "ที่มา", "nav-plant": "มาตรฐาน", "nav-contact": "ติดต่อ",
     "origin-line": "ไทยวากิว · ทุ่งกุลาร้องไห้",
-    "hook": "เนื้อวัวจากเครือข่ายโคเนื้อทุ่งกุลา จังหวัดร้อยเอ็ด ตัดแต่งและบรรจุในโรงงานที่ได้รับรอง ISO 22000 พร้อมส่งให้ผู้นำเข้า ผู้จัดจำหน่าย และร้านอาหาร",
+    "hook": "เนื้อวัวจากเครือข่ายโคเนื้อทุ่งกุลา จังหวัดร้อยเอ็ด ตัดแต่งและบรรจุในโรงงานที่ได้รับรอง ISO 22000 สำหรับผู้นำเข้า ผู้จัดจำหน่าย และร้านอาหาร",
     "s-origin": "แหล่งที่มา", "v-origin": "ทุ่งกุลาร้องไห้ ร้อยเอ็ด ประเทศไทย",
     "s-proc": "ผู้แปรรูป", "s-std": "มาตรฐาน", "v-valid": "ใช้ได้ถึง",
     "s-cuts": "สินค้า", "v-cuts": "เนื้อสไลด์ใบพาย · เนื้อสไลด์วากิว · เนื้อสเต็ก · เนื้อครึ่งแดด",
@@ -59,7 +59,7 @@ const T = {
     "add": "ใส่ใบสั่ง", "added": "อยู่ในใบสั่งแล้ว",
     "origin-title": "จากแผ่นดินแห้งแล้ง สู่เนื้อวัวชั้นเลิศ",
     "origin-1": "ทุ่งกุลาร้องไห้มีพื้นที่ 2.6 ล้านไร่ในภาคอีสาน อยู่ในจังหวัดร้อยเอ็ดกว่า 980,000 ไร่ ที่นี่เคยได้ชื่อว่าแห้งแล้งและทุรกันดาร เกษตรกรทำนาเป็นหลักและเลี้ยงวัวเป็นอาชีพรอง แต่รายได้หลักมาจากการเลี้ยงสัตว์",
-    "origin-2": "เครือข่ายโคเนื้อทุ่งกุลารวมเกษตรกรรุ่นใหม่ เพื่อยกระดับมูลค่าของวัวที่เลี้ยง ให้พี่น้องเกษตรกรมีรายได้มากขึ้น",
+    "origin-2": "เครือข่ายโคเนื้อทุ่งกุลารวมคนรุ่นใหม่ที่มีแนวคิดยกระดับและฟื้นฟูอาชีพให้มีมูลค่าสูงขึ้น เพื่อให้พี่น้องเกษตรกรมีรายได้เพิ่มขึ้น",
     "f-plain": "ทุ่งกุลาร้องไห้", "f-roiet": "ในจังหวัดร้อยเอ็ด", "rai": "ไร่",
     "plant-title": "แปรรูปตามมาตรฐาน ISO 22000",
     "plant-1": "KULA BEEF ตัดแต่งและบรรจุโดย บริษัท นครพนม บีฟ (ไทยแลนด์) จำกัด ซึ่งระบบการจัดการความปลอดภัยอาหารได้รับการรับรอง ISO 22000:2018 สำหรับการผลิตและแปรรูปเนื้อสัตว์",
@@ -73,7 +73,7 @@ const T = {
     "f-error": "กรุณากรอกชื่อ และเลือกสินค้าอย่างน้อยหนึ่งแพ็กหรือเขียนหมายเหตุ",
     "send-email": "ส่งทางอีเมล", "send-line": "คัดลอกแล้วเปิด LINE",
     "copied": "คัดลอกใบสั่งแล้ว วางในแชท LINE ที่เปิดขึ้นมาได้เลย",
-    "copy-fail": "คัดลอกอัตโนมัติไม่ได้ กรุณาคัดลอกข้อความใบสั่งเองแล้วส่งทาง LINE",
+    "copy-fail": "คัดลอกอัตโนมัติไม่ได้ กรุณาคัดลอกข้อความใบสั่งด้านล่างแล้ววางในแชท LINE", "less": "ลดหนึ่ง", "more": "เพิ่มหนึ่ง",
     "contact-title": "ฝ่ายส่งออก",
     "role": "ผู้จัดการฝ่ายส่งออก", "phone": "โทร", "email": "อีเมล", "map": "แผนที่",
     "address": "ร้อยเอ็ด 45190",
@@ -85,7 +85,7 @@ const T = {
     "skip": "跳到产品",
     "nav-cuts": "产品", "nav-origin": "产地", "nav-plant": "标准", "nav-contact": "联系",
     "origin-line": "泰国和牛 · 通库拉荣海",
-    "hook": "来自泰国东北部黎逸府通库拉肉牛网络的牛肉，在 ISO 22000 认证工厂分割包装。供应进口商、经销商和餐厅。",
+    "hook": "来自泰国东北部黎逸府通库拉肉牛网络的牛肉，在 ISO 22000 认证工厂分割包装。面向进口商、经销商和餐厅。",
     "s-origin": "产地", "v-origin": "泰国黎逸府通库拉荣海平原",
     "s-proc": "加工商", "s-std": "标准", "v-valid": "有效期至",
     "s-cuts": "产品", "v-cuts": "板腱肉片 · 和牛肉片 · 牛排 · 半干牛肉",
@@ -99,7 +99,7 @@ const T = {
     "add": "加入订单", "added": "已在订单中",
     "origin-title": "从干旱之地到优质牛肉",
     "origin-1": "通库拉荣海平原横跨泰国东北部，面积 260 万莱，其中约 98 万莱位于黎逸府。这里曾以干旱贫瘠著称。农户以种稻为主业、养牛为副业，但主要收入来自养牛。",
-    "origin-2": "通库拉肉牛网络把新一代农户聚集起来，提升牛群的价值，让养牛的家庭获得更多收入。",
+    "origin-2": "通库拉肉牛网络把新一代农户聚集起来，致力于提升牛群的价值和养牛家庭的收入。",
     "f-plain": "通库拉平原", "f-roiet": "黎逸府境内", "rai": "莱",
     "plant-title": "按 ISO 22000 加工",
     "plant-1": "KULA BEEF 由 Nakhonphanom Beef (Thailand) Co., Ltd. 分割包装，其食品安全管理体系已通过 ISO 22000:2018 认证，范围为肉类生产与加工。",
@@ -113,7 +113,7 @@ const T = {
     "f-error": "请填写姓名，并至少选择一个产品或填写备注。",
     "send-email": "通过邮件发送", "send-line": "复制并打开 LINE",
     "copied": "订单已复制。请粘贴到刚打开的 LINE 对话中。",
-    "copy-fail": "无法自动复制。请手动复制订单内容并通过 LINE 发送。",
+    "copy-fail": "无法自动复制。请复制下方订单内容并粘贴到 LINE 对话中。", "less": "减少一个", "more": "增加一个",
     "contact-title": "出口部",
     "role": "出口经理", "phone": "电话", "email": "电子邮件", "map": "地图",
     "address": "泰国黎逸府 45190",
@@ -125,7 +125,7 @@ const T = {
     "skip": "انتقل إلى المنتجات",
     "nav-cuts": "المنتجات", "nav-origin": "المنشأ", "nav-plant": "المعايير", "nav-contact": "اتصل بنا",
     "origin-line": "واغيو تايلاندي · ثونغ كولا رونغ هاي",
-    "hook": "لحم بقري من شبكة ثونغ كولا لتربية الماشية في روي إت، شمال شرق تايلاند، يُقطَّع ويُعبَّأ في مصنع حاصل على شهادة ISO 22000. نورّد للمستوردين والموزعين والمطابخ.",
+    "hook": "لحم بقري من شبكة ثونغ كولا لتربية الماشية في روي إت، شمال شرق تايلاند، يُقطَّع ويُعبَّأ في مصنع حاصل على شهادة ISO 22000. للمستوردين والموزعين والمطابخ.",
     "s-origin": "المنشأ", "v-origin": "ثونغ كولا رونغ هاي، روي إت، تايلاند",
     "s-proc": "جهة التصنيع", "s-std": "المعيار", "v-valid": "سارية حتى",
     "s-cuts": "القطع", "v-cuts": "شرائح فلات آيرون · شرائح واغيو · ستيك · لحم نصف مجفف",
@@ -139,7 +139,7 @@ const T = {
     "add": "أضف إلى الطلب", "added": "في قائمة الطلب",
     "origin-title": "من أرض جافة إلى لحم فاخر",
     "origin-1": "ثونغ كولا رونغ هاي سهل مساحته 2.6 مليون راي في شمال شرق تايلاند، منها نحو 980,000 راي في روي إت. عُرف قديمًا بالجفاف وصعوبة الزراعة. تزرع العائلات هنا الأرز وتربي الماشية، والماشية مصدر معظم الدخل.",
-    "origin-2": "تجمع شبكة ثونغ كولا لتربية الماشية جيلًا جديدًا من المزارعين لرفع قيمة القطيع، حتى تحصل العائلات التي تربيه على دخل أكبر.",
+    "origin-2": "تجمع شبكة ثونغ كولا لتربية الماشية جيلًا جديدًا من المزارعين بهدف رفع قيمة القطيع ودخل العائلات التي تربيه.",
     "f-plain": "سهل ثونغ كولا", "f-roiet": "في روي إت", "rai": "راي",
     "plant-title": "مُصنَّع وفق ISO 22000",
     "plant-1": "تُقطَّع منتجات KULA BEEF وتُعبَّأ لدى شركة Nakhonphanom Beef (Thailand) Co., Ltd.، ونظام إدارة سلامة الغذاء لديها مسجل وفق ISO 22000:2018 لتصنيع اللحوم ومعالجتها.",
@@ -153,7 +153,7 @@ const T = {
     "f-error": "يرجى كتابة اسمك، واختيار عبوة واحدة على الأقل أو كتابة ملاحظة.",
     "send-email": "أرسل بالبريد الإلكتروني", "send-line": "انسخ وافتح LINE",
     "copied": "تم نسخ القسيمة. الصقها في محادثة LINE التي فُتحت الآن.",
-    "copy-fail": "تعذّر النسخ تلقائيًا. انسخ نص القسيمة يدويًا وأرسله عبر LINE.",
+    "copy-fail": "تعذّر النسخ تلقائيًا. انسخ نص القسيمة أدناه والصقه في محادثة LINE.", "less": "إزالة واحدة", "more": "إضافة واحدة",
     "contact-title": "قسم التصدير",
     "role": "مديرة التصدير", "phone": "الهاتف", "email": "البريد الإلكتروني", "map": "على الخريطة",
     "address": "روي إت، تايلاند 45190",
@@ -175,6 +175,7 @@ const slipList = document.querySelector(".slip");
 const form = document.querySelector(".slip-form");
 const errorEl = form.querySelector(".form-error");
 const copiedEl = form.querySelector(".copied");
+const slipTextEl = form.querySelector(".slip-text");
 
 const t = (key, l = lang) => T[l][key] ?? T.en[key];
 
@@ -214,10 +215,13 @@ function renderSlip() {
   for (const [id, qty] of slip) {
     const pack = packs.find((p) => p.dataset.id === id);
     const li = document.createElement("li");
+    const name = t(`p-${id}`);
     li.innerHTML = `<span class="n"></span>
-      <span class="qty"><button type="button" data-step="-1" aria-label="−"><svg aria-hidden="true"><use href="#i-minus"/></svg></button><output></output><button type="button" data-step="1" aria-label="+"><svg aria-hidden="true"><use href="#i-plus"/></svg></button></span>
-      <span class="s"></span>`;
-    li.querySelector(".n").textContent = t(`p-${id}`);
+      <span class="qty"><button type="button" data-step="-1"><svg aria-hidden="true"><use href="#i-minus"/></svg></button><output></output><button type="button" data-step="1"><svg aria-hidden="true"><use href="#i-plus"/></svg></button></span>
+      <bdi class="s"></bdi>`;
+    li.querySelector(".n").textContent = name;
+    li.querySelector("[data-step='-1']").setAttribute("aria-label", `${t("less")}: ${name}`);
+    li.querySelector("[data-step='1']").setAttribute("aria-label", `${t("more")}: ${name}`);
     li.querySelector("output").textContent = qty;
     li.querySelector(".s").textContent = `${(qty * Number(pack.dataset.price)).toLocaleString("en")} THB`;
     li.querySelectorAll("[data-step]").forEach((b) => b.addEventListener("click", () => {
@@ -228,6 +232,7 @@ function renderSlip() {
     }));
     slipList.append(li);
   }
+  if (tried) validate();
 }
 
 packs.forEach((pack) => {
@@ -238,6 +243,17 @@ packs.forEach((pack) => {
     renderSlip();
   });
 });
+
+// after the first failed send, the error clears as soon as the slip becomes valid
+let tried = false;
+function validate() {
+  const hasName = !!form.elements.name.value.trim();
+  const ok = hasName && (slip.size > 0 || !!form.elements.note.value.trim());
+  form.elements.name.setAttribute("aria-invalid", String(tried && !hasName));
+  errorEl.hidden = ok || !tried;
+  return ok;
+}
+form.addEventListener("input", () => { if (tried) validate(); });
 
 function slipText(data) {
   const lines = [t("slip-head"), ""];
@@ -257,25 +273,28 @@ function slipText(data) {
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const data = new FormData(form);
-  const nameField = form.elements.name;
-  const hasName = !!data.get("name").trim();
-  const ok = hasName && (slip.size || data.get("note").trim());
-  nameField.setAttribute("aria-invalid", String(!hasName));
-  errorEl.hidden = !!ok;
+  tried = true;
   copiedEl.hidden = true;
-  if (!ok) { (hasName ? form.elements.note : nameField).focus(); return; }
+  slipTextEl.hidden = true;
+  if (!validate()) {
+    (form.elements.name.value.trim() ? form.elements.note : form.elements.name).focus();
+    return;
+  }
 
-  const text = slipText(data);
+  const text = slipText(new FormData(form));
   if (e.submitter && e.submitter.dataset.via === "line") {
+    // open LINE inside the click gesture, before any await, so mobile browsers allow it
+    window.open(LINE_URL, "_blank", "noopener");
     try {
       await navigator.clipboard.writeText(text);
       copiedEl.textContent = t("copied");
     } catch (err) {
       copiedEl.textContent = t("copy-fail");
+      slipTextEl.value = text;
+      slipTextEl.hidden = false;
+      slipTextEl.select();
     }
     copiedEl.hidden = false;
-    window.open(LINE_URL, "_blank", "noopener");
   } else {
     window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(t("subject"))}&body=${encodeURIComponent(text)}`;
   }
