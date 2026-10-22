@@ -11,7 +11,8 @@ const T = {
     "s-cuts": "Cuts", "v-cuts": "Flat iron slices · Wagyu slices · Steak · Half-dried beef",
     "cta-quote": "Request a quote", "cta-line": "Chat on LINE",
     "cuts-title": "Net weight, per pack",
-    "cuts-note": "Retail prices in Thai baht. Export and wholesale prices on request.",
+    "cuts-note": "Prices on request: send an order slip or message us on LINE.",
+    "zoom": "View larger photo", "close": "Close",
     "p-flatiron": "Thai Wagyu flat iron slices", "d-flatiron": "Chuck tender (ใบพาย), sliced for grill, shabu and stir-fry.",
     "p-slice": "Wagyu slices", "d-slice": "Thin marbled slices for hot pot and sukiyaki.",
     "p-steak": "Beef steak", "d-steak": "Steak-cut beef for the grill or pan.",
@@ -24,7 +25,7 @@ const T = {
     "plant-title": "Processed to ISO 22000",
     "plant-1": "KULA BEEF is cut and packed by Nakhonphanom Beef (Thailand) Co., Ltd., whose food safety management system is registered to ISO 22000:2018 for the manufacturing and processing of meat.",
     "c-body": "Certified by", "c-no": "Certificate", "c-dates": "Valid", "c-check": "Verify",
-    "cert-cap": "Tap to open the full certificate.", "room-cap": "The cutting room.",
+    "cert-cap": "Tap to open the full certificate.",
     "order-title": "Order slip",
     "order-note": "Add packs from the list above, tell us who you are, and send the slip by email or LINE. We reply with export prices and terms.",
     "slip-empty": "Nothing on the slip yet. Use “Add to order” on a pack above.",
@@ -51,7 +52,8 @@ const T = {
     "s-cuts": "สินค้า", "v-cuts": "เนื้อสไลด์ใบพาย · เนื้อสไลด์วากิว · เนื้อสเต็ก · เนื้อครึ่งแดด",
     "cta-quote": "ขอใบเสนอราคา", "cta-line": "คุยทาง LINE",
     "cuts-title": "น้ำหนักสุทธิต่อแพ็ก",
-    "cuts-note": "ราคาขายปลีกเป็นบาท ราคาส่งและราคาส่งออกสอบถามได้",
+    "cuts-note": "สอบถามราคาได้ ส่งใบสั่งสินค้าหรือทักทาง LINE",
+    "zoom": "ดูรูปใหญ่", "close": "ปิด",
     "p-flatiron": "เนื้อสไลด์ใบพาย ไทยวากิว", "d-flatiron": "ส่วนใบพาย สไลด์พร้อมย่าง ชาบู หรือผัด",
     "p-slice": "เนื้อสไลด์วากิว", "d-slice": "สไลด์บาง ลายไขมันสวย สำหรับชาบูและสุกี้ยากี้",
     "p-steak": "เนื้อสเต็ก", "d-steak": "ตัดหนาสำหรับย่างหรือทอดในกระทะ",
@@ -64,7 +66,7 @@ const T = {
     "plant-title": "แปรรูปตามมาตรฐาน ISO 22000",
     "plant-1": "KULA BEEF ตัดแต่งและบรรจุโดย บริษัท นครพนม บีฟ (ไทยแลนด์) จำกัด ซึ่งระบบการจัดการความปลอดภัยอาหารได้รับการรับรอง ISO 22000:2018 สำหรับการผลิตและแปรรูปเนื้อสัตว์",
     "c-body": "ผู้ให้การรับรอง", "c-no": "เลขที่ใบรับรอง", "c-dates": "ระยะเวลา", "c-check": "ตรวจสอบ",
-    "cert-cap": "แตะเพื่อเปิดใบรับรองฉบับเต็ม", "room-cap": "ห้องตัดแต่งเนื้อ",
+    "cert-cap": "แตะเพื่อเปิดใบรับรองฉบับเต็ม",
     "order-title": "ใบสั่งสินค้า",
     "order-note": "เลือกแพ็กจากรายการด้านบน กรอกชื่อ แล้วส่งใบสั่งทางอีเมลหรือ LINE เราจะตอบกลับพร้อมราคาและเงื่อนไข",
     "slip-empty": "ยังไม่มีสินค้าในใบสั่ง กด “ใส่ใบสั่ง” ที่แพ็กด้านบน",
@@ -91,7 +93,8 @@ const T = {
     "s-cuts": "产品", "v-cuts": "板腱肉片 · 和牛肉片 · 牛排 · 半干牛肉",
     "cta-quote": "索取报价", "cta-line": "LINE 联系",
     "cuts-title": "每包净重",
-    "cuts-note": "零售价以泰铢计。出口及批发价格请询价。",
+    "cuts-note": "价格请询价：发送订货单或通过 LINE 联系我们。",
+    "zoom": "查看大图", "close": "关闭",
     "p-flatiron": "泰国和牛板腱肉片", "d-flatiron": "板腱部位切片，适合烧烤、涮锅和炒菜。",
     "p-slice": "和牛肉片", "d-slice": "大理石纹薄切片，适合火锅和寿喜烧。",
     "p-steak": "牛排", "d-steak": "厚切牛排，适合烧烤或煎。",
@@ -104,7 +107,7 @@ const T = {
     "plant-title": "按 ISO 22000 加工",
     "plant-1": "KULA BEEF 由 Nakhonphanom Beef (Thailand) Co., Ltd. 分割包装，其食品安全管理体系已通过 ISO 22000:2018 认证，范围为肉类生产与加工。",
     "c-body": "认证机构", "c-no": "证书编号", "c-dates": "有效期", "c-check": "查验",
-    "cert-cap": "点击查看完整证书。", "room-cap": "分割车间。",
+    "cert-cap": "点击查看完整证书。",
     "order-title": "订货单",
     "order-note": "从上方选择产品，填写您的信息，然后通过电子邮件或 LINE 发送。我们会回复出口价格和条款。",
     "slip-empty": "订单为空。请点击上方产品的“加入订单”。",
@@ -131,7 +134,8 @@ const T = {
     "s-cuts": "القطع", "v-cuts": "شرائح فلات آيرون · شرائح واغيو · ستيك · لحم نصف مجفف",
     "cta-quote": "اطلب عرض سعر", "cta-line": "تواصل عبر LINE",
     "cuts-title": "الوزن الصافي لكل عبوة",
-    "cuts-note": "أسعار التجزئة بالبات التايلاندي. أسعار التصدير والجملة عند الطلب.",
+    "cuts-note": "الأسعار عند الطلب: أرسل قسيمة الطلب أو راسلنا عبر LINE.",
+    "zoom": "عرض الصورة بحجم أكبر", "close": "إغلاق",
     "p-flatiron": "شرائح فلات آيرون واغيو تايلاندي", "d-flatiron": "من قطعة الكتف، مقطعة للشواء والشابو والقلي السريع.",
     "p-slice": "شرائح واغيو", "d-slice": "شرائح رقيقة مُرخّمة للهوت بوت والسوكيياكي.",
     "p-steak": "ستيك لحم بقري", "d-steak": "قطع ستيك للشواء أو المقلاة.",
@@ -144,7 +148,7 @@ const T = {
     "plant-title": "مُصنَّع وفق ISO 22000",
     "plant-1": "تُقطَّع منتجات KULA BEEF وتُعبَّأ لدى شركة Nakhonphanom Beef (Thailand) Co., Ltd.، ونظام إدارة سلامة الغذاء لديها مسجل وفق ISO 22000:2018 لتصنيع اللحوم ومعالجتها.",
     "c-body": "جهة الاعتماد", "c-no": "رقم الشهادة", "c-dates": "الصلاحية", "c-check": "التحقق",
-    "cert-cap": "اضغط لفتح الشهادة كاملة.", "room-cap": "غرفة التقطيع.",
+    "cert-cap": "اضغط لفتح الشهادة كاملة.",
     "order-title": "قسيمة الطلب",
     "order-note": "أضف العبوات من القائمة أعلاه، وأخبرنا من أنت، ثم أرسل القسيمة بالبريد الإلكتروني أو عبر LINE. سنرد بأسعار التصدير والشروط.",
     "slip-empty": "القسيمة فارغة. استخدم «أضف إلى الطلب» على إحدى العبوات أعلاه.",
@@ -176,6 +180,8 @@ const form = document.querySelector(".slip-form");
 const errorEl = form.querySelector(".form-error");
 const copiedEl = form.querySelector(".copied");
 const slipTextEl = form.querySelector(".slip-text");
+const viewer = document.getElementById("viewer");
+const viewerImg = viewer.querySelector(".viewer-img");
 
 const t = (key, l = lang) => T[l][key] ?? T.en[key];
 
@@ -199,6 +205,7 @@ function setLang(next, animate = true) {
     document.body.classList.add("reprint");
   }
   slipTextEl.setAttribute("aria-label", t("order-title"));
+  viewer.querySelector(".viewer-close").setAttribute("aria-label", t("close"));
   try { localStorage.setItem("kb-lang", lang); } catch (e) {}
 }
 
@@ -209,6 +216,7 @@ function syncPack(pack) {
   btn.setAttribute("aria-pressed", String(on));
   btn.querySelector("span").textContent = on ? t("added") : t("add");
   btn.querySelector("use").setAttribute("href", on ? "#i-minus" : "#i-plus");
+  pack.querySelector(".zoom").setAttribute("aria-label", `${t("zoom")}: ${t(`p-${pack.dataset.id}`)}`);
 }
 
 function renderSlip() {
@@ -218,13 +226,11 @@ function renderSlip() {
     const li = document.createElement("li");
     const name = t(`p-${id}`);
     li.innerHTML = `<span class="n"></span>
-      <span class="qty"><button type="button" data-step="-1"><svg aria-hidden="true"><use href="#i-minus"/></svg></button><output></output><button type="button" data-step="1"><svg aria-hidden="true"><use href="#i-plus"/></svg></button></span>
-      <bdi class="s"></bdi>`;
+      <span class="qty"><button type="button" data-step="-1"><svg aria-hidden="true"><use href="#i-minus"/></svg></button><output></output><button type="button" data-step="1"><svg aria-hidden="true"><use href="#i-plus"/></svg></button></span>`;
     li.querySelector(".n").textContent = name;
     li.querySelector("[data-step='-1']").setAttribute("aria-label", `${t("less")}: ${name}`);
     li.querySelector("[data-step='1']").setAttribute("aria-label", `${t("more")}: ${name}`);
     li.querySelector("output").textContent = qty;
-    li.querySelector(".s").textContent = `${(qty * Number(pack.dataset.price)).toLocaleString("en")} THB`;
     li.querySelectorAll("[data-step]").forEach((b) => b.addEventListener("click", () => {
       const n = qty + Number(b.dataset.step);
       if (n <= 0) slip.delete(id); else slip.set(id, n);
@@ -244,6 +250,19 @@ packs.forEach((pack) => {
     renderSlip();
   });
 });
+
+// tap a pack photo to see it full size
+packs.forEach((pack) => {
+  pack.querySelector(".zoom").addEventListener("click", () => {
+    const img = pack.querySelector(".zoom img");
+    viewerImg.src = img.currentSrc || img.src;
+    viewerImg.alt = img.alt;
+    viewer.querySelector(".viewer-title").textContent = t(`p-${pack.dataset.id}`);
+    viewer.showModal();
+  });
+});
+viewer.querySelector(".viewer-close").addEventListener("click", () => viewer.close());
+viewer.addEventListener("click", (e) => { if (e.target === viewer) viewer.close(); });
 
 // after the first failed send, the error clears as soon as the slip becomes valid
 let tried = false;

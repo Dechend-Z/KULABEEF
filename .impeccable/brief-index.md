@@ -1,6 +1,6 @@
 Scope: index.html, the brand's one-page site replacing openlink and the old site. Mode: Persuade.
 Audience: export / B2B buyers, mostly on phones; secondary Thai retail customers.
-Action: build an order slip and send it to the Export Manager (email / LINE), or contact directly (LINE, phone, Messenger, email).
+Action: build an order slip and send it to the Export Manager (email / LINE), or contact directly (LINE, phone, email).
 Proof: ISO 22000:2018 certificate of the processor (valid to 2027-03-27), processing-room and marbling photos, Thung Kula origin story. Halal certificate withheld (expired).
 Constraints: EN default, TH / 中文 / عربي switch, Arabic RTL. Static GitHub Pages. No invented MOQ, cold chain, markets.
 

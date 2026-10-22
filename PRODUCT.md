@@ -28,9 +28,9 @@ Buyers arrive from a shared link (LINE, Facebook, Instagram, trade contacts), us
 
 ## Capabilities and Constraints
 
-- Products (openlink, current): Thai Wagyu sliced beef, chuck tender / flat-iron (ใบพาย) 200 g, 120 THB (promotion); Wagyu sliced beef 100 g/pack, 59 THB; beef steak 200 g, 150 THB; half-dried beef (เนื้อครึ่งแดด) 200 g, 160 THB. Prices are retail; export pricing is not published.
+- Products (openlink, current): Thai Wagyu sliced beef, chuck tender / flat-iron (ใบพาย) 200 g, 120 THB (promotion); Wagyu sliced beef 100 g/pack, 59 THB; beef steak 200 g, 150 THB; half-dried beef (เนื้อครึ่งแดด) 200 g, 160 THB. Prices are retail; the owner asked (2026-10-22) that no price appears on the site, so all prices are on request.
 - Contact: Ms. Jirapachara Jankaew, Export Manager. Tel 064 403 1524. LINE https://line.me/ti/p/smoS2zVStO. Facebook https://www.facebook.com/kulabeef101. Instagram https://www.instagram.com/kula_beef. Map https://maps.app.goo.gl/CFnyTLQov8jm7WYr5. Address: Roi Et, Thailand 45190.
-- Contact channels confirmed by owner: LINE, phone, Messenger (https://m.me/kulabeef101), email ksskids@outlook.com.
+- Contact channels confirmed by owner: LINE, phone, email ksskids@outlook.com. Messenger and Facebook were removed from the site at the owner's request (2026-10-22); Instagram stays.
 - No MOQ, shipping terms, cold-chain or export-market facts are confirmed. Do not invent them.
 - Languages: English default, plus Thai, 中文, عربي (Arabic in RTL).
 - Certificates: show ISO 22000 only. Halal certificate is withheld until a renewed copy is supplied.

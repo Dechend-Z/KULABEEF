@@ -23,6 +23,8 @@
     <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5h18v14H3z M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-7-7-12a7 7 0 0 1 14 0c0 5-7 12-7 12z M12 11.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24"><path d="M10.5 4a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></symbol>
     <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></symbol>
   </svg>
 
@@ -70,39 +72,35 @@
     <section class="cuts" id="cuts" aria-labelledby="cuts-title">
       <div class="section-head">
         <h2 id="cuts-title" class="print" data-i18n="cuts-title">Net weight, per pack</h2>
-        <p class="print" data-i18n="cuts-note">Retail prices in Thai baht. Export and wholesale prices on request.</p>
+        <p class="print" data-i18n="cuts-note">Prices on request: send an order slip or message us on LINE.</p>
       </div>
       <ol class="packs">
-        <li class="pack" data-id="flatiron" data-price="120">
-          <figure><img src="asset/openlink/p-flatiron.jpg" alt="Thai Wagyu flat iron slices in a KULA BEEF pack" loading="lazy" width="1080" height="1080"></figure>
+        <li class="pack" data-id="flatiron">
+          <figure><button type="button" class="zoom"><img src="asset/openlink/p-flatiron-ask.jpg" alt="Thai Wagyu flat iron slices in a KULA BEEF pack" loading="lazy" width="1080" height="1080"><span class="zoom-hint" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span></button></figure>
           <p class="weight print"><bdi><span class="num">200</span> G</bdi></p>
           <h3 class="print" data-i18n="p-flatiron">Thai Wagyu flat iron slices</h3>
           <p class="sub print" data-i18n="d-flatiron">Chuck tender (ใบพาย), sliced for grill, shabu and stir-fry.</p>
-          <p class="price print"><bdi><span class="num">120</span> THB</bdi></p>
           <button type="button" class="add"><svg aria-hidden="true"><use href="#i-plus"/></svg><span data-i18n="add">Add to order</span></button>
         </li>
-        <li class="pack" data-id="slice" data-price="59">
-          <figure><img src="asset/beef0.jpg" alt="Marbled Wagyu slices with the KULA BEEF label" loading="lazy" width="960" height="1706"></figure>
+        <li class="pack" data-id="slice">
+          <figure><button type="button" class="zoom"><img src="asset/beef0.jpg" alt="Marbled Wagyu slices with the KULA BEEF label" loading="lazy" width="960" height="1706"><span class="zoom-hint" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span></button></figure>
           <p class="weight print"><bdi><span class="num">100</span> G</bdi></p>
           <h3 class="print" data-i18n="p-slice">Wagyu slices</h3>
           <p class="sub print" data-i18n="d-slice">Thin marbled slices for hot pot and sukiyaki.</p>
-          <p class="price print"><bdi><span class="num">59</span> THB</bdi></p>
           <button type="button" class="add"><svg aria-hidden="true"><use href="#i-plus"/></svg><span data-i18n="add">Add to order</span></button>
         </li>
-        <li class="pack" data-id="steak" data-price="150">
-          <figure><img src="asset/openlink/p-steak.jpg" alt="Grilled KULA BEEF steak, sliced" loading="lazy" width="1080" height="1080"></figure>
+        <li class="pack" data-id="steak">
+          <figure><button type="button" class="zoom"><img src="asset/openlink/p-steak-ask.jpg" alt="Grilled KULA BEEF steak, sliced" loading="lazy" width="1080" height="1080"><span class="zoom-hint" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span></button></figure>
           <p class="weight print"><bdi><span class="num">200</span> G</bdi></p>
           <h3 class="print" data-i18n="p-steak">Beef steak</h3>
           <p class="sub print" data-i18n="d-steak">Steak-cut beef for the grill or pan.</p>
-          <p class="price print"><bdi><span class="num">150</span> THB</bdi></p>
           <button type="button" class="add"><svg aria-hidden="true"><use href="#i-plus"/></svg><span data-i18n="add">Add to order</span></button>
         </li>
-        <li class="pack" data-id="halfdried" data-price="160">
-          <figure><img src="asset/openlink/p-halfdried.jpg" alt="Vacuum-packed half-dried beef with the KULA BEEF label" loading="lazy" width="848" height="1200"></figure>
+        <li class="pack" data-id="halfdried">
+          <figure><button type="button" class="zoom"><img src="asset/openlink/p-halfdried-ask.jpg" alt="Vacuum-packed half-dried beef with the KULA BEEF label" loading="lazy" width="848" height="1200"><span class="zoom-hint" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span></button></figure>
           <p class="weight print"><bdi><span class="num">200</span> G</bdi></p>
           <h3 class="print" data-i18n="p-halfdried">Half-dried beef</h3>
           <p class="sub print" data-i18n="d-halfdried">Sun-dried Isan style (เนื้อครึ่งแดด), ready to fry.</p>
-          <p class="price print"><bdi><span class="num">160</span> THB</bdi></p>
           <button type="button" class="add"><svg aria-hidden="true"><use href="#i-plus"/></svg><span data-i18n="add">Add to order</span></button>
         </li>
       </ol>
@@ -133,7 +131,6 @@
         </dl>
       </div>
       <figure class="cert"><a href="asset/openlink/cert1.jpg" target="_blank" rel="noopener"><img src="asset/openlink/cert1.jpg" alt="ISO 22000:2018 certificate for Nakhonphanom Beef (Thailand) Co., Ltd., certificate number TAF24009" loading="lazy" width="835" height="1200"></a><figcaption data-i18n="cert-cap">Tap to open the full certificate.</figcaption></figure>
-      <figure class="room"><img src="asset/openlink/cert4.jpg" alt="Carcasses hanging in the tiled cutting room, staff in white uniforms and boots" loading="lazy" width="752" height="1020"><figcaption data-i18n="room-cap">The cutting room.</figcaption></figure>
     </section>
 
     <section class="order" id="order" aria-labelledby="order-title">
@@ -168,10 +165,9 @@
         <li><a href="https://line.me/ti/p/smoS2zVStO" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-chat"/></svg><span>LINE</span><small>smoS2zVStO</small></a></li>
         <li><a href="tel:+66644031524"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="phone">Phone</span><small dir="ltr">+66 64 403 1524</small></a></li>
         <li><a href="mailto:ksskids@outlook.com"><svg aria-hidden="true"><use href="#i-mail"/></svg><span data-i18n="email">Email</span><small>ksskids@outlook.com</small></a></li>
-        <li><a href="https://m.me/kulabeef101" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-chat"/></svg><span>Messenger</span><small>kulabeef101</small></a></li>
         <li><a href="https://maps.app.goo.gl/CFnyTLQov8jm7WYr5" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="map">On the map</span><small data-i18n="address">Roi Et, Thailand 45190</small></a></li>
       </ul>
-      <p class="social"><a href="https://www.facebook.com/kulabeef101" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/kula_beef" target="_blank" rel="noopener">Instagram</a></p>
+      <p class="social"><a href="https://www.instagram.com/kula_beef" target="_blank" rel="noopener">Instagram</a></p>
       <p class="sister"><span data-i18n="sister">Same export desk, halal processed beef from Satun:</span> <a href="https://dechend-z.github.io/WHITEMOUNTAINBEEF/">WHITE MOUNTAIN</a></p>
     </section>
   </main>
@@ -180,6 +176,14 @@
     <p lang="th">เครือข่ายโคเนื้อทุ่งกุลา · Thung Kula cattle network</p>
     <p>© 2026 KULA BEEF</p>
   </footer>
+
+  <dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer-bar">
+      <p class="viewer-title" id="viewer-title"></p>
+      <button type="button" class="viewer-close" aria-label="Close"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+    <img class="viewer-img" alt="">
+  </dialog>
 
   <script src="script.js"></script>
 </body>

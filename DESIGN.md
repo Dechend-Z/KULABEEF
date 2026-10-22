@@ -193,7 +193,7 @@ Rubber-stamped, uppercase, extended.
 ### Packs (cards)
 - **Corner Style:** square.
 - **Background:** woven sack, 3px ink frame, photo boxed by a 3px rule beneath it.
-- **Content:** red extended weight figure, title, sub, price pushed to the bottom.
+- **Content:** red extended weight figure, title, sub; the add bar is pushed to the bottom. No prices on the site (owner request). The photo is a button that opens the full image in the viewer dialog.
 - **Action:** a full-width black "Add to order" bar ruled off at the top; turns red on hover. A selected pack takes a red border plus a 3px red outline and keeps its bar red.
 
 ### Spec Panel
